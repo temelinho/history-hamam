@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History Hamam & Spa | Katalog ve Dijital Menü</title>
+  <meta name="description" content="History Hamam Alanya - Geleneksel Osmanlı Hamamı, Kese Köpük Masajı, Spa Ürünleri, İçecek ve Yiyecek Kataloğu." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <span><i data-lucide="map-pin"></i> Oba, 25151 Sk Atlantis Apt, Alanya</span>
+        <span class="dot">•</span>
+        <span><i data-lucide="clock"></i> Her Gün Open: 09:00 - 00:30</span>
+      </div>
+      <div class="top-actions">
+        <!-- Language Switcher -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langDropdownBtn">
+            <span id="currentLangFlag">🇹🇷</span>
+            <span id="currentLangText">TR</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <button data-lang="tr">🇹🇷 Türkçe</button>
+            <button data-lang="en">🇬🇧 English</button>
+            <button data-lang="ru">🇷🇺 Русский</button>
+            <button data-lang="de">🇩🇪 Deutsch</button>
+          </div>
+        </div>
+
+        <!-- Currency Selector -->
+        <div class="currency-selector">
+          <button class="currency-btn" id="currencyDropdownBtn">
+            <span id="currentCurrency">₺ TRY</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="currency-menu" id="currencyMenu">
+            <button data-curr="TRY">₺ TRY</button>
+            <button data-curr="EUR">€ EUR</button>
+            <button data-curr="USD">$ USD</button>
+            <button data-curr="GBP">£ GBP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="brand">
+        <div class="brand-crest">
+          <svg viewBox="0 0 100 100" class="crest-svg">
+            <polygon points="50,5 95,50 50,95 5,50" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4,2"/>
+            <polygon points="50,25 75,50 50,75 25,50" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="50" cy="50" r="6" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="sub-title" data-i18n="tagline">TRADITIONAL TURKISH BATH • EST. ANTALYA</span>
+          <h1 class="main-title">History <span>Hamam</span></h1>
+          <span class="badge-text" data-i18n="experience">AUTHENTIC OTTOMAN SPA EXPERIENCE</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a href="tel:05523040101" class="btn-phone">
+          <i data-lucide="phone"></i>
+          <span>0552 304 01 01</span>
+        </a>
+        <a href="https://wa.me/905523040101" target="_blank" class="btn-whatsapp">
+          <i data-lucide="message-circle"></i>
+          <span data-i18n="direct_whatsapp">WhatsApp Rezervasyon</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section & Search Bar -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="ornament-divider">
+        <span class="line"></span>
+        <span class="diamond">◆</span>
+        <span class="line"></span>
+      </div>
+      <h2 data-i18n="hero_title">Saray İhtişamıyla Yenilenin</h2>
+      <p class="hero-desc" data-i18n="hero_desc">
+        Tarihi Osmanlı hamam gelenekleri, uzman masörlerimiz, özel spa bakım ürünlerimiz, taze meşrubat ve ikramlıklarımızla ruhunuzu dinlendirin.
+      </p>
+
+      <!-- Search & Filter Controls -->
+      <div class="search-box-wrapper">
+        <div class="search-box">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Hizmet, ürün, masaj veya meşrubat ara..." data-i18n-placeholder="search_placeholder" />
+          <button id="clearSearchBtn" class="clear-btn" style="display: none;">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Catalog Navigation Tabs -->
+  <section class="catalog-section container">
+    <div class="main-tabs">
+      <button class="main-tab active" data-main-tab="all">
+        <i data-lucide="layout-grid"></i>
+        <span data-i18n="tab_all">Tüm Katalog</span>
+      </button>
+      <button class="main-tab" data-main-tab="services">
+        <i data-lucide="sparkles"></i>
+        <span data-i18n="tab_services">Hamam & Spa Hizmetleri</span>
+      </button>
+      <button class="main-tab" data-main-tab="spa_products">
+        <i data-lucide="package"></i>
+        <span data-i18n="tab_spa_products">Spa & Bakım Ürünleri</span>
+      </button>
+      <button class="main-tab" data-main-tab="beverages">
+        <i data-lucide="cup-soda"></i>
+        <span data-i18n="tab_beverages">İçecekler & Meşrubatlar</span>
+      </button>
+      <button class="main-tab" data-main-tab="food">
+        <i data-lucide="utensils"></i>
+        <span data-i18n="tab_food">Gıda & Abur Cubur</span>
+      </button>
+    </div>
+
+    <!-- Secondary Sub-Category Filter Pills -->
+    <div class="sub-category-filters" id="subCategoryFilters">
+      <!-- Dynamic Filters populated by JS -->
+    </div>
+
+    <!-- Active Filter Counter Info -->
+    <div class="catalog-status">
+      <span id="resultsCount">Yükleniyor...</span>
+      <div class="sort-wrapper">
+        <label for="sortSelect" data-i18n="sort_by">Sırala:</label>
+        <select id="sortSelect">
+          <option value="featured" data-i18n="sort_featured">Öne Çıkanlar</option>
+          <option value="price-asc" data-i18n="sort_price_asc">Fiyat: Düşükten Yükseğe</option>
+          <option value="price-desc" data-i18n="sort_price_desc">Fiyat: Yüksekten Düşüğe</option>
+          <option value="name" data-i18n="sort_name">İsme Göre (A-Z)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grid Container for Items -->
+    <div class="catalog-grid" id="catalogGrid">
+      <!-- Dynamic catalog cards render here -->
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <i data-lucide="search-x" class="empty-icon"></i>
+      <h3 data-i18n="empty_title">Aradığınız kriterde ürün veya hizmet bulunamadı</h3>
+      <p data-i18n="empty_desc">Lütfen arama teriminizi değiştirin veya filtreleri temizleyin.</p>
+      <button class="btn-reset-filter" id="resetFilterBtn" data-i18n="reset_filters">Filtreleri Temizle</button>
+    </div>
+  </section>
+
+  <!-- Luxury Features Banner -->
+  <section class="features-banner">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="crown"></i></div>
+        <h4 data-i18n="feat1_title">Geleneksel Osmanlı Hizmeti</h4>
+        <p data-i18n="feat1_desc">Saray geleneklerine uygun kese, köpük ve özel bitkisel banyo ritüelleri.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="user-check"></i></div>
+        <h4 data-i18n="feat2_title">Uzman Terapistler</h4>
+        <p data-i18n="feat2_desc">Sertifikalı ve deneyimli tatar tellakları ile bayan/bay masaj uzmanları.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="leaf"></i></div>
+        <h4 data-i18n="feat3_title">%100 Doğal Ürünler</h4>
+        <p data-i18n="feat3_desc">Saf zeytinyağlı sabunlar, doğal kil ve organik masaj yağları.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="coffee"></i></div>
+        <h4 data-i18n="feat4_title">Zengin İkram & Büfe</h4>
+        <p data-i18n="feat4_desc">Köpüklü Türk kahvesi, soğuk Osmanlı şerbeti, meşrubatlar ve zengin atıştırmalıklar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail Modal Drawer -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalCloseBtn">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-content" id="modalContent">
+        <!-- Dynamic Modal Inner Content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h2 class="footer-logo">History <span>Hamam</span></h2>
+        <p data-i18n="footer_about">Alanya'nın kalbinde tarihi dokusu, lüks spa ritüelleri, hamam ürünleri ve güler yüzlü hizmet anlayışıyla misafirlerimize unutulmaz bir ferahlık sunuyoruz.</p>
+      </div>
+      
+      <div class="footer-contact">
+        <h3 data-i18n="footer_contact_title">İletişim & Konum</h3>
+        <ul>
+          <li><i data-lucide="map-pin"></i> Oba, 25151 Sk Atlantis Apt, Alanya / Antalya</li>
+          <li><i data-lucide="phone"></i> <a href="tel:05523040101">0552 304 01 01</a></li>
+          <li><i data-lucide="globe"></i> historyhamam.com.tr</li>
+          <li><i data-lucide="clock"></i> <span data-i18n="working_hours">Haftanın 7 Günü: 09:00 - 00:30</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-qr">
+        <h3 data-i18n="qr_menu_title">Dijital Menü QR</h3>
+        <div class="qr-box">
+          <svg viewBox="0 0 100 100" class="qr-placeholder">
+            <rect width="100" height="100" fill="#14110e" rx="8"/>
+            <path d="M10,10 h30 v30 h-30 z M15,15 h20 v20 h-20 z M20,20 h10 v10 h-10 z" fill="#e5c158"/>
+            <path d="M60,10 h30 v30 h-30 z M65,15 h20 v20 h-20 z M70,20 h10 v10 h-10 z" fill="#e5c158"/>
+            <path d="M10,60 h30 v30 h-30 z M15,65 h20 v20 h-20 z M20,70 h10 v10 h-10 z" fill="#e5c158"/>
+            <rect x="50" y="50" width="10" height="10" fill="#e5c158"/>
+            <rect x="65" y="50" width="15" height="10" fill="#e5c158"/>
+            <rect x="50" y="65" width="10" height="25" fill="#e5c158"/>
+            <rect x="65" y="75" width="25" height="15" fill="#e5c158"/>
+          </svg>
+        </div>
+        <p class="qr-sub" data-i18n="qr_sub">Masalarda Telefonunuzla Okutun</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>© 2026 History Hamam Alanya. Tüm Hakları Saklıdır.</p>
+      <div class="social-links">
+        <a href="https://wa.me/905523040101" target="_blank"><i data-lucide="message-circle"></i></a>
+        <a href="tel:05523040101"><i data-lucide="phone"></i></a>
+        <a href="https://historyhamam.com.tr" target="_blank"><i data-lucide="globe"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Booking Bar for Mobile -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:05523040101" class="mobile-btn call-btn">
+      <i data-lucide="phone"></i>
+      <span data-i18n="call">Ara</span>
+    </a>
+    <a href="https://wa.me/905523040101" target="_blank" class="mobile-btn wa-btn">
+      <i data-lucide="message-circle"></i>
+      <span data-i18n="whatsapp_order">WhatsApp Bilgi & Sipariş</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./src/data.js"></script>
+  <script src="./src/app.js"></script>
+</body>
+</html>
