@@ -274,59 +274,74 @@ body {
   margin-top: 3px;
 }
 
+/* Icon-Only Header Buttons */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-.btn-phone, .btn-whatsapp {
+.btn-icon-header {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: var(--radius-sm);
-  font-size: 0.88rem;
-  font-weight: 600;
+  justify-content: center;
   text-decoration: none;
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.btn-phone {
+.btn-icon-header i {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-icon-intro {
+  background: rgba(229, 193, 88, 0.12);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+}
+
+.btn-icon-intro:hover {
+  background: var(--gold-gradient);
+  color: #0c0a08;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 15px rgba(229, 193, 88, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-icon-phone {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-gold);
   color: var(--gold-light);
 }
 
-.btn-phone:hover {
-  background: rgba(212, 175, 55, 0.15);
+.btn-icon-phone:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-primary);
   color: var(--gold-primary);
+  transform: translateY(-2px);
 }
 
-.btn-whatsapp {
+.btn-icon-whatsapp {
   background: var(--gold-gradient);
   color: #0c0a08;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-}
-
-.btn-whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-}
-
-.btn-nav-intro, .btn-nav-menu {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: var(--radius-sm);
-  font-size: 0.88rem;
-  font-weight: 600;
-  text-decoration: none;
-  background: rgba(229, 193, 88, 0.12);
   border: 1px solid var(--gold-primary);
-  color: var(--gold-primary);
-  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+}
+
+.btn-icon-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.55);
+}
+
+/* Catalog Search Wrapper (Placed directly above products) */
+.catalog-search-wrapper {
+  max-width: 680px;
+  margin: 0 auto 24px auto;
 }
 
 .btn-nav-intro:hover, .btn-nav-menu:hover {

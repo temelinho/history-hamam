@@ -100,38 +100,18 @@
       </div>
 
       <div class="header-actions">
-        <a href="tanitim.html" class="btn-nav-intro">
+        <a href="tanitim.html" class="btn-icon-header btn-icon-intro" title="Tanıtım Sayfası">
           <i data-lucide="info"></i>
-          <span data-i18n="nav_intro">Tanıtım</span>
         </a>
-        <a href="tel:05523040101" class="btn-phone">
+        <a href="tel:05523040101" class="btn-icon-header btn-icon-phone" title="0552 304 01 01">
           <i data-lucide="phone"></i>
-          <span>0552 304 01 01</span>
         </a>
-        <a href="https://wa.me/905523040101" target="_blank" class="btn-whatsapp">
+        <a href="https://wa.me/905523040101" target="_blank" class="btn-icon-header btn-icon-whatsapp" title="WhatsApp Bilgi & Rezervasyon">
           <i data-lucide="message-circle"></i>
-          <span data-i18n="direct_whatsapp">WhatsApp</span>
         </a>
       </div>
     </div>
   </header>
-
-  <!-- Compact Search Section (Catalog First Focus) -->
-  <section class="hero-section hero-compact">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <!-- Search Box Only (Language & Currency is in Header) -->
-      <div class="search-hero-wrapper">
-        <div class="search-box">
-          <i data-lucide="search" class="search-icon"></i>
-          <input type="text" id="searchInput" placeholder="Hizmet, ürün, masaj veya meşrubat ara..." data-i18n-placeholder="search_placeholder" />
-          <button id="clearSearchBtn" class="clear-btn" style="display: none;">
-            <i data-lucide="x"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- VIP Visual Main Category Navigation Tabs (HİZMETLER & ÜRÜNLER) -->
   <section class="catalog-section container">
@@ -165,6 +145,15 @@
       </button>
     </div>
 
+    <!-- Search Box (Placed directly above Products & Subcategories) -->
+    <div class="catalog-search-wrapper">
+      <div class="search-box">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Hizmet, ürün, masaj veya meşrubat ara..." data-i18n-placeholder="search_placeholder" />
+        <button id="clearSearchBtn" class="clear-btn" style="display: none;">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
     <!-- Secondary Sub-Category Filter Pills -->
     <div class="sub-category-filters" id="subCategoryFilters">
       <!-- Dynamic Filters populated by JS -->
