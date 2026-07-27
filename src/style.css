@@ -638,6 +638,35 @@ body {
   margin-bottom: 25px;
 }
 
+/* 2-Button Main Tabs Layout (Hizmetler & Ürünler) */
+.main-tabs-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 580px;
+  margin: 0 auto 25px auto;
+  gap: 14px;
+}
+
+.main-tabs-two .main-tab {
+  justify-content: center;
+  padding: 16px 24px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-radius: 30px;
+}
+
+.main-tabs-two .main-tab.active {
+  background: var(--gold-gradient);
+  color: #0c0a08;
+  border-color: var(--gold-primary);
+  box-shadow: 0 6px 20px rgba(229, 193, 88, 0.4);
+}
+
+.main-tabs-two .main-tab.active i {
+  color: #0c0a08;
+}
+
 .main-tab {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);

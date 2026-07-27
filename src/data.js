@@ -18,10 +18,8 @@ const UI_TRANSLATIONS = {
     hero_desc: "Tarihi Osmanlı hamam gelenekleri, uzman masörlerimiz, özel banyo bakım ürünlerimiz, soğuk ve sıcak ikramlıklarımızla ruhunuzu dinlendirin.",
     search_placeholder: "Hizmet, masaj, ürün veya meşrubat ara...",
     tab_all: "Tüm Katalog",
-    tab_services: "Hamam & Spa Hizmetleri",
-    tab_spa_products: "Spa & Bakım Ürünleri",
-    tab_beverages: "İçecekler & Meşrubatlar",
-    tab_food: "Gıda & Abur Cubur",
+    tab_services: "HİZMETLER",
+    tab_products: "ÜRÜNLER",
     sort_by: "Sırala:",
     sort_featured: "Öne Çıkanlar",
     sort_price_asc: "Fiyat: Düşükten Yükseğe",
@@ -67,10 +65,8 @@ const UI_TRANSLATIONS = {
     hero_desc: "Immerse yourself in authentic Ottoman Turkish bath traditions, expert therapists, organic spa products, and refreshing gourmet drinks.",
     search_placeholder: "Search service, massage, product or drink...",
     tab_all: "All Items",
-    tab_services: "Hamam & Spa Services",
-    tab_spa_products: "Spa & Body Products",
-    tab_beverages: "Beverages & Drinks",
-    tab_food: "Food & Snacks",
+    tab_services: "SERVICES",
+    tab_products: "PRODUCTS",
     sort_by: "Sort by:",
     sort_featured: "Featured First",
     sort_price_asc: "Price: Low to High",
@@ -116,10 +112,8 @@ const UI_TRANSLATIONS = {
     hero_desc: "Окунитесь в традиции турецкого хамама: классический пилинг, пенный массаж, органическая косметика и освежающие напитки.",
     search_placeholder: "Поиск услуги, массажа, товара или напитка...",
     tab_all: "Весь Каталог",
-    tab_services: "Услуги Хамама и СПА",
-    tab_spa_products: "СПА Продукция",
-    tab_beverages: "Напитки и Соки",
-    tab_food: "Закуски и Еда",
+    tab_services: "УСЛУГИ",
+    tab_products: "ТОВАРЫ",
     sort_by: "Сортировка:",
     sort_featured: "Рекомендуемые",
     sort_price_asc: "Цена: по возрастанию",
@@ -165,10 +159,8 @@ const UI_TRANSLATIONS = {
     hero_desc: "Genießen Sie traditionelle Hamam-Rituale, professionelle Massagen, Pflegeprodukte und erfrischende Getränke.",
     search_placeholder: "Suchen Sie nach Service, Massage oder Getränken...",
     tab_all: "Gesamter Katalog",
-    tab_services: "Hamam & Spa Angebote",
-    tab_spa_products: "Spa & Pflegeprodukte",
-    tab_beverages: "Getränke & Erfrischungen",
-    tab_food: "Speisen & Snacks",
+    tab_services: "ANGEBOTE",
+    tab_products: "PRODUKTE",
     sort_by: "Sortieren:",
     sort_featured: "Empfohlen",
     sort_price_asc: "Preis: Aufsteigend",
@@ -985,9 +977,6 @@ const CATALOG_ITEMS = [
 ];
 
 const SUB_CATEGORIES = {
-  all: [
-    { key: 'all', label: { tr: 'Tüm Ürünler', en: 'All Items', ru: 'Все', de: 'Alle' } }
-  ],
   services: [
     { key: 'all', label: { tr: 'Tüm Hizmetler', en: 'All Services', ru: 'Все услуги', de: 'Alle Angebote' } },
     { key: 'hamam_rituals', label: { tr: 'Hamam Ritüelleri', en: 'Hamam Rituals', ru: 'Ритуалы хамама', de: 'Hamam Rituale' } },
@@ -995,24 +984,10 @@ const SUB_CATEGORIES = {
     { key: 'massages', label: { tr: 'Masajlar', en: 'Massages', ru: 'Массажи', de: 'Massagen' } },
     { key: 'skin_care', label: { tr: 'Cilt Bakımları', en: 'Facial & Scrub', ru: 'Уход за кожей', de: 'Gesicht & Peeling' } }
   ],
-  spa_products: [
+  products: [
     { key: 'all', label: { tr: 'Tüm Ürünler', en: 'All Products', ru: 'Все товары', de: 'Alle Produkte' } },
-    { key: 'soaps', label: { tr: 'Doğal Sabunlar', en: 'Natural Soaps', ru: 'Мыло', de: 'Naturseifen' } },
-    { key: 'textile', label: { tr: 'Kese & Peştemal', en: 'Kese & Towels', ru: 'Кесе и Пештемаль', de: 'Kese & Tücher' } },
-    { key: 'oils', label: { tr: 'Spa Yağları', en: 'Spa Oils', ru: 'Масла', de: 'Spa-Öle' } },
-    { key: 'sets', label: { tr: 'Hediyelik Setler', en: 'Gift Sets', ru: 'Подарочные наборы', de: 'Geschenksets' } }
-  ],
-  beverages: [
-    { key: 'all', label: { tr: 'Tüm İçecekler', en: 'All Drinks', ru: 'Все напитки', de: 'Alle Getränke' } },
-    { key: 'cold_drinks', label: { tr: 'Soğuk Meşrubatlar', en: 'Cold Soft Drinks', ru: 'Напитки со льдом', de: 'Kühle Erfrischungen' } },
-    { key: 'fresh_juices', label: { tr: 'Taze Meyve Suları', en: 'Fresh Juices', ru: 'Свежие соки', de: 'Frische Säfte' } },
-    { key: 'hot_drinks', label: { tr: 'Kahve & Sıcak Çaylar', en: 'Coffee & Hot Teas', ru: 'Кофе и чай', de: 'Kaffee & Heißgetränke' } }
-  ],
-  food: [
-    { key: 'all', label: { tr: 'Tüm Gıdalar', en: 'All Foods', ru: 'Вся еда', de: 'Alle Speisen' } },
-    { key: 'desserts', label: { tr: 'Tatlılar & Baklava', en: 'Desserts & Baklava', ru: 'Десерты и Баклава', de: 'Süßspeisen & Baklava' } },
-    { key: 'snacks', label: { tr: 'Kuruyemiş & Abur Cubur', en: 'Nuts & Snacks', ru: 'Орехи и Снеки', de: 'Nüsse & Snacks' } },
-    { key: 'fruits', label: { tr: 'Meyve Tabakları', en: 'Fruit Platters', ru: 'Фруктовые тарелки', de: 'Obstteller' } },
-    { key: 'hot_food', label: { tr: 'Tost & Sandviçler', en: 'Toasts & Sandwiches', ru: 'Тосты и Сендвичи', de: 'Toast & Sandwiches' } }
+    { key: 'spa_products', label: { tr: 'Spa & Bakım Ürünleri', en: 'Spa & Body Products', ru: 'СПА Продукция', de: 'Spa & Pflege' } },
+    { key: 'beverages', label: { tr: 'İçecekler & Meşrubatlar', en: 'Beverages & Drinks', ru: 'Напитки и Соки', de: 'Getränke' } },
+    { key: 'food', label: { tr: 'Gıda & Atıştırmalıklar', en: 'Food & Snacks', ru: 'Закуски и Еда', de: 'Speisen & Snacks' } }
   ]
 };

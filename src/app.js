@@ -210,14 +210,19 @@ function setupSort() {
 
 function getFilteredItems() {
   return CATALOG_ITEMS.filter((item) => {
-    // Filter Main Category
-    if (currentMainTab !== 'all' && item.mainCategory !== currentMainTab) {
+    // Filter Main Category (services vs products)
+    if (currentMainTab === 'services' && item.mainCategory !== 'services') {
+      return false;
+    }
+    if (currentMainTab === 'products' && item.mainCategory === 'services') {
       return false;
     }
 
     // Filter Sub Category
-    if (currentSubCategory !== 'all' && item.subCategory !== currentSubCategory) {
-      return false;
+    if (currentSubCategory !== 'all') {
+      if (item.subCategory !== currentSubCategory && item.mainCategory !== currentSubCategory) {
+        return false;
+      }
     }
 
     // Search Filter
