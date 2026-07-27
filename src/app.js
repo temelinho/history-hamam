@@ -38,16 +38,42 @@ function initApp() {
    ========================================== */
 
 function setupLanguageSelector() {
+  const triggerBtn = document.getElementById('langDropdownTrigger');
+  const menu = document.getElementById('langDropdownMenu');
   const langBtns = document.querySelectorAll('[data-lang]');
+
+  if (triggerBtn && menu) {
+    triggerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const currMenu = document.getElementById('currDropdownMenu');
+      if (currMenu) currMenu.classList.remove('show');
+      menu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', () => {
+      menu.classList.remove('show');
+    });
+  }
+
+  const flagMap = { tr: '🇹🇷', en: '🇬🇧', ru: '🇷🇺', de: '🇩🇪' };
+
   langBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       currentLang = btn.getAttribute('data-lang');
 
-      // Update active state on all language buttons (top bar + search section)
+      // Update header button label
+      const flagEl = document.getElementById('headerCurrentFlag');
+      const langEl = document.getElementById('headerCurrentLang');
+      if (flagEl) flagEl.textContent = flagMap[currentLang] || '🇹🇷';
+      if (langEl) langEl.textContent = currentLang.toUpperCase();
+
+      // Update active state
       document.querySelectorAll('[data-lang]').forEach((b) => {
         b.classList.toggle('active', b.getAttribute('data-lang') === currentLang);
       });
+
+      if (menu) menu.classList.remove('show');
 
       updateLanguageUI();
       renderSubCategories();
@@ -57,16 +83,41 @@ function setupLanguageSelector() {
 }
 
 function setupCurrencySelector() {
+  const triggerBtn = document.getElementById('currDropdownTrigger');
+  const menu = document.getElementById('currDropdownMenu');
   const currBtns = document.querySelectorAll('[data-curr]');
+
+  if (triggerBtn && menu) {
+    triggerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const langMenu = document.getElementById('langDropdownMenu');
+      if (langMenu) langMenu.classList.remove('show');
+      menu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', () => {
+      menu.classList.remove('show');
+    });
+  }
+
   currBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       currentCurrency = btn.getAttribute('data-curr');
 
-      // Update active state on all currency buttons (top bar + search section)
+      // Update header button label
+      const currObj = CURRENCY_RATES[currentCurrency] || CURRENCY_RATES.TRY;
+      const symbolEl = document.getElementById('headerCurrentSymbol');
+      const currEl = document.getElementById('headerCurrentCurr');
+      if (symbolEl) symbolEl.textContent = currObj.symbol;
+      if (currEl) currEl.textContent = currentCurrency;
+
+      // Update active state
       document.querySelectorAll('[data-curr]').forEach((b) => {
         b.classList.toggle('active', b.getAttribute('data-curr') === currentCurrency);
       });
+
+      if (menu) menu.classList.remove('show');
 
       renderCatalog();
     });

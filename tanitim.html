@@ -23,27 +23,58 @@
   <div class="top-bar">
     <div class="container top-bar-content">
       <div class="top-info">
-        <span><i data-lucide="map-pin"></i> Oba, 25151 Sk Atlantis Apt, Alanya</span>
+        <span class="info-item"><i data-lucide="map-pin"></i> Oba, Alanya</span>
         <span class="dot">•</span>
-        <span><i data-lucide="clock"></i> Her Gün Open: 09:00 - 00:30</span>
+        <span class="info-item"><i data-lucide="clock"></i> 09:00 - 00:30</span>
       </div>
-      <div class="top-actions">
-        <!-- Direct Language Flag Buttons -->
-        <div class="top-lang-flags">
-          <button class="top-flag-btn active" data-lang="tr" title="Türkçe">🇹🇷 <span>TR</span></button>
-          <button class="top-flag-btn" data-lang="en" title="English">🇬🇧 <span>EN</span></button>
-          <button class="top-flag-btn" data-lang="ru" title="Русский">🇷🇺 <span>RU</span></button>
-          <button class="top-flag-btn" data-lang="de" title="Deutsch">🇩🇪 <span>DE</span></button>
+
+      <div class="top-selectors">
+        <!-- Compact Mobile Language Dropdown -->
+        <div class="header-dropdown-wrap">
+          <button class="header-dropdown-btn" id="langDropdownTrigger">
+            <span id="headerCurrentFlag">🇹🇷</span>
+            <span id="headerCurrentLang">TR</span>
+            <i data-lucide="chevron-down" class="chevron-icon"></i>
+          </button>
+
+          <div class="header-dropdown-menu" id="langDropdownMenu">
+            <button class="dropdown-item active" data-lang="tr">
+              <span class="flag-emoji">🇹🇷</span> Türkçe
+            </button>
+            <button class="dropdown-item" data-lang="en">
+              <span class="flag-emoji">🇬🇧</span> English
+            </button>
+            <button class="dropdown-item" data-lang="ru">
+              <span class="flag-emoji">🇷🇺</span> Русский
+            </button>
+            <button class="dropdown-item" data-lang="de">
+              <span class="flag-emoji">🇩🇪</span> Deutsch
+            </button>
+          </div>
         </div>
 
-        <span class="top-divider">|</span>
+        <!-- Compact Mobile Currency Dropdown -->
+        <div class="header-dropdown-wrap">
+          <button class="header-dropdown-btn" id="currDropdownTrigger">
+            <span id="headerCurrentSymbol">₺</span>
+            <span id="headerCurrentCurr">TRY</span>
+            <i data-lucide="chevron-down" class="chevron-icon"></i>
+          </button>
 
-        <!-- Direct Currency Buttons -->
-        <div class="top-currency-btns">
-          <button class="top-curr-btn active" data-curr="TRY">₺ <span>TRY</span></button>
-          <button class="top-curr-btn" data-curr="EUR">€ <span>EUR</span></button>
-          <button class="top-curr-btn" data-curr="USD">$ <span>USD</span></button>
-          <button class="top-curr-btn" data-curr="GBP">£ <span>GBP</span></button>
+          <div class="header-dropdown-menu" id="currDropdownMenu">
+            <button class="dropdown-item active" data-curr="TRY">
+              <span class="curr-symbol">₺</span> TRY
+            </button>
+            <button class="dropdown-item" data-curr="EUR">
+              <span class="curr-symbol">€</span> EUR
+            </button>
+            <button class="dropdown-item" data-curr="USD">
+              <span class="curr-symbol">$</span> USD
+            </button>
+            <button class="dropdown-item" data-curr="GBP">
+              <span class="curr-symbol">£</span> GBP
+            </button>
+          </div>
         </div>
       </div>
     </div>

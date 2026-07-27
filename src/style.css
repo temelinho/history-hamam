@@ -68,82 +68,144 @@ body {
 
 /* Top Announcement Bar */
 .top-bar {
-  background: rgba(10, 8, 6, 0.95);
+  background: rgba(10, 8, 6, 0.96);
   border-bottom: 1px solid var(--border-gold);
   font-size: 0.82rem;
   padding: 8px 0;
   color: var(--text-muted);
+  position: relative;
+  z-index: 100;
 }
 
 .top-bar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 10px;
 }
 
 .top-info {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--gold-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.top-info .info-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .top-info i {
   width: 14px;
   height: 14px;
   color: var(--gold-primary);
-  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .top-info .dot {
   color: var(--gold-dark);
+  opacity: 0.7;
 }
 
-.top-actions {
+/* Header Dropdowns (Açılır Kayar Pencereler) */
+.top-selectors {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
-.top-divider {
-  color: var(--border-gold);
-  font-size: 0.8rem;
-  opacity: 0.5;
+.header-dropdown-wrap {
+  position: relative;
 }
 
-.top-lang-flags, .top-currency-btns {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.top-flag-btn, .top-curr-btn {
-  background: rgba(21, 18, 14, 0.9);
+.header-dropdown-btn {
+  background: rgba(20, 16, 12, 0.95);
   border: 1px solid var(--border-gold);
-  color: var(--text-muted);
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
+  color: var(--gold-light);
+  padding: 5px 10px;
+  border-radius: 8px;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.header-dropdown-btn:hover {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: var(--gold-primary);
+  color: #ffffff;
+}
+
+.header-dropdown-btn .chevron-icon {
+  width: 12px;
+  height: 12px;
+  color: var(--gold-primary);
+  transition: transform 0.25s ease;
+}
+
+.header-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 140px;
+  background: rgba(16, 13, 9, 0.98);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--gold-primary);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  padding: 5px 0;
+  overflow: hidden;
+  animation: dropdownSlide 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.header-dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-item {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
   transition: var(--transition);
 }
 
-.top-flag-btn:hover, .top-curr-btn:hover {
-  background: rgba(212, 175, 55, 0.15);
-  border-color: var(--gold-primary);
-  color: var(--gold-light);
-}
-
-.top-flag-btn.active, .top-curr-btn.active {
-  background: linear-gradient(135deg, rgba(229, 193, 88, 0.3) 0%, rgba(168, 132, 39, 0.4) 100%);
-  border-color: var(--gold-primary);
-  color: #ffffff;
-  box-shadow: 0 0 10px rgba(229, 193, 88, 0.35);
+.dropdown-item:hover, .dropdown-item.active {
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--gold-primary);
 }
 
 /* Main Header */
@@ -1471,31 +1533,42 @@ body {
 
 /* Responsive Breakpoints */
 @media (max-width: 768px) {
-  .header-actions {
-    display: none;
+  .top-bar-content {
+    gap: 6px;
   }
   
-  .brand-text .main-title {
-    font-size: 1.8rem;
+  .top-info {
+    font-size: 0.72rem;
   }
   
-  .hero-section h2 {
-    font-size: 1.8rem;
-  }
-  
-  .hero-desc {
-    font-size: 1rem;
-  }
-  
-  .main-tabs {
+  .header-container {
     flex-direction: column;
+    text-align: center;
+    gap: 12px;
   }
   
-  .main-tab {
-    width: 100%;
+  .brand.center-brand, .brand {
     justify-content: center;
   }
-  
+
+  .brand-text .main-title {
+    font-size: 1.6rem;
+  }
+
+  .header-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .header-actions .btn-nav-intro,
+  .header-actions .btn-phone,
+  .header-actions .btn-whatsapp {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
+
   .mobile-sticky-bar {
     display: flex;
   }
