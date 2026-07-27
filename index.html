@@ -86,11 +86,11 @@
     </div>
   </header>
 
-  <!-- Compact Search & Flag/Currency Bar (Catalog First Focus) -->
+  <!-- Compact Search Section (Catalog First Focus) -->
   <section class="hero-section hero-compact">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <!-- Search & Quick Language / Currency Bar -->
+      <!-- Search Box Only (Language & Currency is in Header) -->
       <div class="search-hero-wrapper">
         <div class="search-box">
           <i data-lucide="search" class="search-icon"></i>
@@ -99,61 +99,39 @@
             <i data-lucide="x"></i>
           </button>
         </div>
-
-        <!-- Prominent Language Flags & Currency Buttons right next to Search -->
-        <div class="hero-selector-bar">
-          <div class="hero-selector-group">
-            <span class="selector-title"><i data-lucide="globe"></i> <span data-i18n="select_lang">Dil Seçimi</span></span>
-            <div class="flag-pills">
-              <button class="flag-pill active" data-lang="tr" title="Türkçe">
-                <span class="flag-emoji">🇹🇷</span> TR
-              </button>
-              <button class="flag-pill" data-lang="en" title="English">
-                <span class="flag-emoji">🇬🇧</span> EN
-              </button>
-              <button class="flag-pill" data-lang="ru" title="Русский">
-                <span class="flag-emoji">🇷🇺</span> RU
-              </button>
-              <button class="flag-pill" data-lang="de" title="Deutsch">
-                <span class="flag-emoji">🇩🇪</span> DE
-              </button>
-            </div>
-          </div>
-
-          <div class="hero-selector-divider"></div>
-
-          <div class="hero-selector-group">
-            <span class="selector-title"><i data-lucide="coins"></i> <span data-i18n="select_curr">Döviz</span></span>
-            <div class="curr-pills">
-              <button class="curr-pill active" data-curr="TRY">
-                <span class="curr-symbol">₺</span> TRY
-              </button>
-              <button class="curr-pill" data-curr="EUR">
-                <span class="curr-symbol">€</span> EUR
-              </button>
-              <button class="curr-pill" data-curr="USD">
-                <span class="curr-symbol">$</span> USD
-              </button>
-              <button class="curr-pill" data-curr="GBP">
-                <span class="curr-symbol">£</span> GBP
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Main Catalog Navigation Tabs -->
+  <!-- VIP Visual Main Category Navigation Tabs (HİZMETLER & ÜRÜNLER) -->
   <section class="catalog-section container">
-    <div class="main-tabs main-tabs-two">
-      <button class="main-tab active" data-main-tab="services">
-        <i data-lucide="sparkles"></i>
-        <span data-i18n="tab_services">HİZMETLER</span>
+    <div class="main-tabs main-tabs-vip">
+      <button class="main-tab-vip active" data-main-tab="services">
+        <div class="tab-vip-bg" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="tab-vip-overlay"></div>
+        <div class="tab-vip-content">
+          <div class="tab-vip-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <div class="tab-vip-text">
+            <span class="tab-vip-subtitle">VIP SPA & HAMAM</span>
+            <span class="tab-vip-title" data-i18n="tab_services">HİZMETLER</span>
+          </div>
+        </div>
       </button>
-      <button class="main-tab" data-main-tab="products">
-        <i data-lucide="package"></i>
-        <span data-i18n="tab_products">ÜRÜNLER</span>
+
+      <button class="main-tab-vip" data-main-tab="products">
+        <div class="tab-vip-bg" style="background-image: url('https://images.unsplash.com/photo-1608248597263-0057e57b4524?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="tab-vip-overlay"></div>
+        <div class="tab-vip-content">
+          <div class="tab-vip-icon">
+            <i data-lucide="package"></i>
+          </div>
+          <div class="tab-vip-text">
+            <span class="tab-vip-subtitle">DOĞAL BAKIM & İÇECEKLER</span>
+            <span class="tab-vip-title" data-i18n="tab_products">ÜRÜNLER</span>
+          </div>
+        </div>
       </button>
     </div>
 

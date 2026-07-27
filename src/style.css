@@ -638,33 +638,155 @@ body {
   margin-bottom: 25px;
 }
 
-/* 2-Button Main Tabs Layout (Hizmetler & Ürünler) */
-.main-tabs-two {
+/* VIP Visual Image Main Category Tabs (HİZMETLER & ÜRÜNLER) */
+.main-tabs-vip {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 580px;
-  margin: 0 auto 25px auto;
+  max-width: 680px;
+  margin: 0 auto 30px auto;
+  gap: 16px;
+}
+
+.main-tab-vip {
+  position: relative;
+  height: 110px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  background: #14110e;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.tab-vip-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.tab-vip-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(12, 10, 8, 0.88) 0%, rgba(20, 16, 12, 0.72) 100%);
+  transition: background 0.35s ease;
+}
+
+.tab-vip-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
   gap: 14px;
+  padding: 0 20px;
+  height: 100%;
 }
 
-.main-tabs-two .main-tab {
+.tab-vip-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 16px 24px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  border-radius: 30px;
+  color: var(--gold-primary);
+  flex-shrink: 0;
+  transition: all 0.35s ease;
 }
 
-.main-tabs-two .main-tab.active {
+.tab-vip-icon i {
+  width: 22px;
+  height: 22px;
+}
+
+.tab-vip-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-vip-subtitle {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.tab-vip-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+}
+
+/* Hover & Active States */
+.main-tab-vip:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(229, 193, 88, 0.25);
+}
+
+.main-tab-vip:hover .tab-vip-bg {
+  transform: scale(1.06);
+}
+
+.main-tab-vip.active {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 25px rgba(229, 193, 88, 0.45);
+  transform: translateY(-2px);
+}
+
+.main-tab-vip.active .tab-vip-overlay {
+  background: linear-gradient(135deg, rgba(168, 132, 39, 0.72) 0%, rgba(12, 10, 8, 0.82) 100%);
+}
+
+.main-tab-vip.active .tab-vip-icon {
   background: var(--gold-gradient);
   color: #0c0a08;
   border-color: var(--gold-primary);
-  box-shadow: 0 6px 20px rgba(229, 193, 88, 0.4);
+  box-shadow: 0 0 12px rgba(229, 193, 88, 0.5);
 }
 
-.main-tabs-two .main-tab.active i {
-  color: #0c0a08;
+@media (max-width: 640px) {
+  .main-tabs-vip {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .main-tab-vip {
+    height: 95px;
+    border-radius: 16px;
+  }
+  .tab-vip-content {
+    padding: 0 12px;
+    gap: 10px;
+  }
+  .tab-vip-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .tab-vip-icon i {
+    width: 18px;
+    height: 18px;
+  }
+  .tab-vip-subtitle {
+    font-size: 0.58rem;
+    letter-spacing: 1px;
+  }
+  .tab-vip-title {
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+  }
 }
 
 .main-tab {
