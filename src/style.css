@@ -252,22 +252,49 @@ body {
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
 }
 
-.btn-phone i, .btn-whatsapp i {
+.btn-nav-intro, .btn-nav-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(229, 193, 88, 0.12);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  transition: var(--transition);
+}
+
+.btn-nav-intro:hover, .btn-nav-menu:hover {
+  background: var(--gold-gradient);
+  color: #0c0a08;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-phone i, .btn-whatsapp i, .btn-nav-intro i, .btn-nav-menu i {
   width: 16px;
   height: 16px;
 }
 
-/* Hero Section */
+/* Hero Section & Compact Mode */
 .hero-section {
   position: relative;
   padding: 50px 0 40px;
   text-align: center;
 }
 
+.hero-section.hero-compact {
+  padding: 25px 0 20px;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
+  margin: 0 auto;
 }
 
 .ornament-divider {
@@ -303,6 +330,134 @@ body {
   color: var(--text-muted);
   font-style: italic;
   margin-bottom: 30px;
+}
+
+/* Hero Promo Button CTA */
+.hero-cta-wrapper {
+  margin-top: 25px;
+}
+
+.btn-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--gold-gradient);
+  color: #0c0a08;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: 0 6px 25px rgba(229, 193, 88, 0.4);
+  transition: var(--transition);
+}
+
+.btn-hero-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 35px rgba(229, 193, 88, 0.6);
+}
+
+.btn-hero-cta i {
+  width: 20px;
+  height: 20px;
+}
+
+/* Story / Intro Section (tanitim.html) */
+.intro-story-section {
+  padding: 60px 0;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.section-tag {
+  color: var(--gold-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.story-text h3 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.story-text p {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.story-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--gold-light);
+}
+
+.highlight-item i {
+  width: 18px;
+  height: 18px;
+  color: var(--gold-primary);
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* CTA Card Section */
+.catalog-cta-section {
+  padding: 40px 0 70px;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, rgba(21, 18, 14, 0.95) 0%, rgba(35, 29, 22, 0.9) 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+.cta-content h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--gold-light);
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+@media (max-width: 768px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Search Box & Quick Selectors Wrapper */

@@ -133,8 +133,9 @@ function setupMainTabs() {
 
 function renderSubCategories() {
   const container = document.getElementById('subCategoryFilters');
-  const subs = SUB_CATEGORIES[currentMainTab] || SUB_CATEGORIES.all;
+  if (!container) return;
 
+  const subs = SUB_CATEGORIES[currentMainTab] || SUB_CATEGORIES.all;
   container.innerHTML = '';
 
   subs.forEach((item) => {
@@ -160,6 +161,7 @@ function renderSubCategories() {
 function setupSearch() {
   const input = document.getElementById('searchInput');
   const clearBtn = document.getElementById('clearSearchBtn');
+  if (!input || !clearBtn) return;
 
   input.addEventListener('input', (e) => {
     searchQuery = e.target.value.toLowerCase().trim();
@@ -195,6 +197,7 @@ function setupSearch() {
 
 function setupSort() {
   const select = document.getElementById('sortSelect');
+  if (!select) return;
   select.addEventListener('change', (e) => {
     currentSort = e.target.value;
     renderCatalog();
@@ -244,20 +247,23 @@ function renderCatalog() {
   const grid = document.getElementById('catalogGrid');
   const emptyState = document.getElementById('emptyState');
   const resultsCount = document.getElementById('resultsCount');
-  const items = getFilteredItems();
+  if (!grid) return;
 
+  const items = getFilteredItems();
   const dict = UI_TRANSLATIONS[currentLang] || UI_TRANSLATIONS.tr;
 
-  resultsCount.textContent = `${items.length} ${dict.tab_all || 'öğe gösteriliyor'}`;
+  if (resultsCount) {
+    resultsCount.textContent = `${items.length} ${dict.tab_all || 'öğe gösteriliyor'}`;
+  }
 
   if (items.length === 0) {
     grid.style.display = 'none';
-    emptyState.style.display = 'block';
+    if (emptyState) emptyState.style.display = 'block';
     return;
   }
 
   grid.style.display = 'grid';
-  emptyState.style.display = 'none';
+  if (emptyState) emptyState.style.display = 'none';
   grid.innerHTML = '';
 
   items.forEach((item) => {

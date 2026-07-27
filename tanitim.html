@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>History Hamam & Spa | Katalog ve Dijital Menü</title>
-  <meta name="description" content="History Hamam Alanya - Geleneksel Osmanlı Hamamı, Kese Köpük Masajı, Spa Ürünleri, İçecek ve Yiyecek Kataloğu." />
+  <title>History Hamam & Spa | Tanıtım & Osmanlı Hamamı Alanya</title>
+  <meta name="description" content="History Hamam Alanya - Geleneksel Osmanlı Hamamı, Kese Köpük Masajı, Lüks Spa Ürünleri ve Özel Masaj Paketleri Tanıtımı." />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,10 +69,10 @@
       </div>
 
       <div class="header-actions">
-        <!-- Link to Tanıtım Sayfası -->
-        <a href="tanitim.html" class="btn-nav-intro">
-          <i data-lucide="info"></i>
-          <span data-i18n="nav_intro">Tanıtım Sayfası</span>
+        <!-- Direct Button to Digital Menu (index.html) -->
+        <a href="index.html" class="btn-nav-menu">
+          <i data-lucide="book-open"></i>
+          <span data-i18n="nav_catalog">Dijital Menü</span>
         </a>
         <a href="tel:05523040101" class="btn-phone">
           <i data-lucide="phone"></i>
@@ -86,119 +86,62 @@
     </div>
   </header>
 
-  <!-- Compact Search & Flag/Currency Bar (Catalog First Focus) -->
-  <section class="hero-section hero-compact">
+  <!-- Hero Promotional Showcase -->
+  <section class="hero-section hero-promo">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <!-- Search & Quick Language / Currency Bar -->
-      <div class="search-hero-wrapper">
-        <div class="search-box">
-          <i data-lucide="search" class="search-icon"></i>
-          <input type="text" id="searchInput" placeholder="Hizmet, ürün, masaj veya meşrubat ara..." data-i18n-placeholder="search_placeholder" />
-          <button id="clearSearchBtn" class="clear-btn" style="display: none;">
-            <i data-lucide="x"></i>
-          </button>
-        </div>
+      <div class="ornament-divider">
+        <span class="line"></span>
+        <span class="diamond">◆</span>
+        <span class="line"></span>
+      </div>
+      <h2 data-i18n="hero_title">Saray İhtişamıyla Yenilenin</h2>
+      <p class="hero-desc" data-i18n="hero_desc">
+        Tarihi Osmanlı hamam gelenekleri, uzman masörlerimiz, özel spa bakım ürünlerimiz, taze meşrubat ve ikramlıklarımızla ruhunuzu dinlendirin.
+      </p>
 
-        <!-- Prominent Language Flags & Currency Buttons right next to Search -->
-        <div class="hero-selector-bar">
-          <div class="hero-selector-group">
-            <span class="selector-title"><i data-lucide="globe"></i> <span data-i18n="select_lang">Dil Seçimi</span></span>
-            <div class="flag-pills">
-              <button class="flag-pill active" data-lang="tr" title="Türkçe">
-                <span class="flag-emoji">🇹🇷</span> TR
-              </button>
-              <button class="flag-pill" data-lang="en" title="English">
-                <span class="flag-emoji">🇬🇧</span> EN
-              </button>
-              <button class="flag-pill" data-lang="ru" title="Русский">
-                <span class="flag-emoji">🇷🇺</span> RU
-              </button>
-              <button class="flag-pill" data-lang="de" title="Deutsch">
-                <span class="flag-emoji">🇩🇪</span> DE
-              </button>
-            </div>
-          </div>
-
-          <div class="hero-selector-divider"></div>
-
-          <div class="hero-selector-group">
-            <span class="selector-title"><i data-lucide="coins"></i> <span data-i18n="select_curr">Döviz</span></span>
-            <div class="curr-pills">
-              <button class="curr-pill active" data-curr="TRY">
-                <span class="curr-symbol">₺</span> TRY
-              </button>
-              <button class="curr-pill" data-curr="EUR">
-                <span class="curr-symbol">€</span> EUR
-              </button>
-              <button class="curr-pill" data-curr="USD">
-                <span class="curr-symbol">$</span> USD
-              </button>
-              <button class="curr-pill" data-curr="GBP">
-                <span class="curr-symbol">£</span> GBP
-              </button>
-            </div>
-          </div>
-        </div>
+      <div class="hero-cta-wrapper">
+        <a href="index.html" class="btn-hero-cta">
+          <i data-lucide="sparkles"></i>
+          <span data-i18n="go_to_catalog">Dijital Menüyü İnceleyin (Katalog & Fiyatlar)</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Main Catalog Navigation Tabs -->
-  <section class="catalog-section container">
-    <div class="main-tabs">
-      <button class="main-tab active" data-main-tab="services">
-        <i data-lucide="sparkles"></i>
-        <span data-i18n="tab_services">Hamam & Spa Hizmetleri</span>
-      </button>
-      <button class="main-tab" data-main-tab="all">
-        <i data-lucide="layout-grid"></i>
-        <span data-i18n="tab_all">Tüm Katalog</span>
-      </button>
-      <button class="main-tab" data-main-tab="spa_products">
-        <i data-lucide="package"></i>
-        <span data-i18n="tab_spa_products">Spa & Bakım Ürünleri</span>
-      </button>
-      <button class="main-tab" data-main-tab="beverages">
-        <i data-lucide="cup-soda"></i>
-        <span data-i18n="tab_beverages">İçecekler & Meşrubatlar</span>
-      </button>
-      <button class="main-tab" data-main-tab="food">
-        <i data-lucide="utensils"></i>
-        <span data-i18n="tab_food">Gıda & Abur Cubur</span>
-      </button>
-    </div>
-
-    <!-- Secondary Sub-Category Filter Pills -->
-    <div class="sub-category-filters" id="subCategoryFilters">
-      <!-- Dynamic Filters populated by JS -->
-    </div>
-
-    <!-- Active Filter Counter Info -->
-    <div class="catalog-status">
-      <span id="resultsCount">Yükleniyor...</span>
-      <div class="sort-wrapper">
-        <label for="sortSelect" data-i18n="sort_by">Sırala:</label>
-        <select id="sortSelect">
-          <option value="featured" data-i18n="sort_featured">Öne Çıkanlar</option>
-          <option value="price-asc" data-i18n="sort_price_asc">Fiyat: Düşükten Yükseğe</option>
-          <option value="price-desc" data-i18n="sort_price_desc">Fiyat: Yüksekten Düşüğe</option>
-          <option value="name" data-i18n="sort_name">İsme Göre (A-Z)</option>
-        </select>
+  <!-- About / Culture Story Section -->
+  <section class="intro-story-section container">
+    <div class="story-grid">
+      <div class="story-text">
+        <div class="section-tag">
+          <span class="diamond">◆</span> GELENEKSEL SAĞLIK & HUZUR RİTÜELİ
+        </div>
+        <h3>Tarihi Osmanlı Hamam Kültürünü Alanya'da Yaşayın</h3>
+        <p>
+          History Hamam, yüzlerce yıllık Osmanlı saray geleneklerini modern spa konforuyla buluşturuyor. Isıtılmış mermer göbek taşında vücudunuzun gözenekleri açılır, ardından geleneksel ipek kese ile ölü derilerden arındırma ritüeli uygulanır.
+        </p>
+        <p>
+          Organik zeytinyağlı sabun köpükleri eşliğinde yapılan köpük masajı ve uzman terapistlerimizin uyguladığı aromaterapi seansları ile bedeninizdeki tüm stresi geride bırakacaksınız.
+        </p>
+        <div class="story-highlights">
+          <div class="highlight-item">
+            <i data-lucide="check-circle2"></i>
+            <span>Sertifikalı Bay & Bayan Uzman Terapistler</span>
+          </div>
+          <div class="highlight-item">
+            <i data-lucide="check-circle2"></i>
+            <span>%100 Doğal Saf Zeytinyağlı Sabunlar ve Organik Yağlar</span>
+          </div>
+          <div class="highlight-item">
+            <i data-lucide="check-circle2"></i>
+            <span>Hijyenik, Lüks ve Otantik Mimari</span>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!-- Grid Container for Items -->
-    <div class="catalog-grid" id="catalogGrid">
-      <!-- Dynamic catalog cards render here -->
-    </div>
-
-    <!-- Empty State -->
-    <div class="empty-state" id="emptyState" style="display: none;">
-      <i data-lucide="search-x" class="empty-icon"></i>
-      <h3 data-i18n="empty_title">Aradığınız kriterde ürün veya hizmet bulunamadı</h3>
-      <p data-i18n="empty_desc">Lütfen arama teriminizi değiştirin veya filtreleri temizleyin.</p>
-      <button class="btn-reset-filter" id="resetFilterBtn" data-i18n="reset_filters">Filtreleri Temizle</button>
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Osmanlı Hamamı" />
+      </div>
     </div>
   </section>
 
@@ -228,17 +171,19 @@
     </div>
   </section>
 
-  <!-- Detail Modal Drawer -->
-  <div class="modal-backdrop" id="modalBackdrop">
-    <div class="modal-card" id="modalCard">
-      <button class="modal-close" id="modalCloseBtn">
-        <i data-lucide="x"></i>
-      </button>
-      <div class="modal-content" id="modalContent">
-        <!-- Dynamic Modal Inner Content -->
+  <!-- Catalog Call To Action Banner -->
+  <section class="catalog-cta-section container">
+    <div class="cta-card">
+      <div class="cta-content">
+        <h2>Tüm Hizmet, Masaj ve İçeçek Kataloğumuzu Keşfedin</h2>
+        <p>Fiyatlar, detaylı hizmet içerikleri ve anında WhatsApp rezervasyonu için dijital menümüzü ziyaret edin.</p>
+        <a href="index.html" class="btn-whatsapp" style="font-size: 1.1rem; padding: 14px 28px;">
+          <i data-lucide="book-open"></i>
+          <span data-i18n="nav_catalog">Dijital Menüyü Aç</span>
+        </a>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer class="main-footer">
@@ -285,18 +230,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Floating Quick Booking Bar for Mobile -->
-  <div class="mobile-sticky-bar">
-    <a href="tel:05523040101" class="mobile-btn call-btn">
-      <i data-lucide="phone"></i>
-      <span data-i18n="call">Ara</span>
-    </a>
-    <a href="https://wa.me/905523040101" target="_blank" class="mobile-btn wa-btn">
-      <i data-lucide="message-circle"></i>
-      <span data-i18n="whatsapp_order">WhatsApp Bilgi & Sipariş</span>
-    </a>
-  </div>
 
   <!-- Scripts -->
   <script src="./src/data.js"></script>

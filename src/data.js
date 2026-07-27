@@ -55,7 +55,10 @@ const UI_TRANSLATIONS = {
     call: "Ara",
     whatsapp_order: "WhatsApp Bilgi & Sipariş",
     select_lang: "Dil Seçimi",
-    select_curr: "Döviz"
+    select_curr: "Döviz",
+    nav_catalog: "Dijital Menü",
+    nav_intro: "Tanıtım Sayfası",
+    go_to_catalog: "Dijital Menüyü İnceleyin (Katalog & Fiyatlar)"
   },
   en: {
     tagline: "TRADITIONAL TURKISH BATH • EST. ANTALYA",
@@ -101,7 +104,10 @@ const UI_TRANSLATIONS = {
     call: "Call",
     whatsapp_order: "WhatsApp Inquiry & Order",
     select_lang: "Language",
-    select_curr: "Currency"
+    select_curr: "Currency",
+    nav_catalog: "Digital Menu",
+    nav_intro: "About Us / Intro",
+    go_to_catalog: "Explore Digital Menu (Catalog & Prices)"
   },
   ru: {
     tagline: "ТРАДИЦИОННЫЙ ТУРЕЦКИЙ ХАМАМ • АЛАНИЯ",
@@ -147,7 +153,10 @@ const UI_TRANSLATIONS = {
     call: "Звонок",
     whatsapp_order: "WhatsApp Заказ",
     select_lang: "Язык",
-    select_curr: "Валюта"
+    select_curr: "Валюта",
+    nav_catalog: "Цифровое Меню",
+    nav_intro: "О Нас",
+    go_to_catalog: "Перейти в Цифровое Меню (Цены)"
   },
   de: {
     tagline: "TRADITIONELLES TÜRKISCHES BAD • ALANYA",
@@ -193,7 +202,10 @@ const UI_TRANSLATIONS = {
     call: "Anrufen",
     whatsapp_order: "WhatsApp Info & Bestellung",
     select_lang: "Sprache",
-    select_curr: "Währung"
+    select_curr: "Währung",
+    nav_catalog: "Digitales Menü",
+    nav_intro: "Über Uns / Info",
+    go_to_catalog: "Zum Digitalen Menü (Preise & Angebote)"
   }
 };
 
