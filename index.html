@@ -113,36 +113,74 @@
     </div>
   </header>
 
-  <!-- VIP Visual Main Category Navigation Tabs (HİZMETLER & ÜRÜNLER) -->
-  <section class="catalog-section container">
-    <div class="main-tabs main-tabs-vip">
-      <button class="main-tab-vip active" data-main-tab="services">
-        <div class="tab-vip-bg" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80');"></div>
-        <div class="tab-vip-overlay"></div>
-        <div class="tab-vip-content">
-          <div class="tab-vip-icon">
-            <i data-lucide="sparkles"></i>
+  <!-- View 1: Main Home Landing Category Showcase (First Screen View) -->
+  <section class="landing-showcase-section container" id="landingShowcase">
+    <div class="landing-hero-title">
+      <span class="landing-sub-badge" data-i18n="experience">HAKİKİ OSMANLI SPA DENEYİMİ</span>
+      <h2 class="landing-main-title">Lütfen Görmek İstediğiniz Kategoriyi Seçiniz</h2>
+    </div>
+
+    <div class="landing-cards-grid">
+      <!-- Big Card 1: Services (Masaj ve Hamam Hizmetleri) -->
+      <div class="landing-category-card" data-open-category="services">
+        <div class="landing-card-bg" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80');"></div>
+        <div class="landing-card-overlay"></div>
+        <div class="landing-card-content">
+          <div class="landing-card-header">
+            <span class="landing-tag"><i data-lucide="sparkles"></i> VIP SPA & HAMAM</span>
+            <h3 class="landing-card-title" data-i18n="cat_services_title">MASAJ VE HAMAM HİZMETLERİ</h3>
+            <p class="landing-card-desc">Geleneksel Kese Köpük Masajı, Sultan Ritüelleri, Derin Doku Medikal & Aromaterapi Masajları.</p>
           </div>
-          <div class="tab-vip-text">
-            <span class="tab-vip-subtitle">VIP SPA & HAMAM</span>
-            <span class="tab-vip-title" data-i18n="tab_services">HİZMETLER</span>
+          <div class="landing-card-action">
+            <button class="btn-landing-explore">
+              <span data-i18n="tab_services">HİZMETLERİ İNCELEYİN</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
           </div>
         </div>
+      </div>
+
+      <!-- Big Card 2: Products (Sabun ve Yağ Ürünleri) -->
+      <div class="landing-category-card" data-open-category="products">
+        <div class="landing-card-bg" style="background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80');"></div>
+        <div class="landing-card-overlay"></div>
+        <div class="landing-card-content">
+          <div class="landing-card-header">
+            <span class="landing-tag"><i data-lucide="package"></i> DOĞAL BAKIM & İÇECEKLER</span>
+            <h3 class="landing-card-title" data-i18n="cat_products_title">SABUN VE YAĞ ÜRÜNLERİ</h3>
+            <p class="landing-card-desc">Organik Saf Olivenöl Sabunları, Spa Cilt Yağları, Türk Kahvesi & Soğuk Meşrubat Çeşitleri.</p>
+          </div>
+          <div class="landing-card-action">
+            <button class="btn-landing-explore">
+              <span data-i18n="tab_products">ÜRÜNLERİ İNCELEYİN</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- View 2: Detailed Catalog View (Opened when clicking a category) -->
+  <section class="catalog-section container" id="catalogDetailView" style="display: none;">
+    <!-- Catalog Header Bar with Back Button -->
+    <div class="catalog-top-nav">
+      <button class="btn-back-home" id="btnBackToHome">
+        <i data-lucide="arrow-left"></i>
+        <span>Ana Sayfaya Dön</span>
       </button>
 
-      <button class="main-tab-vip" data-main-tab="products">
-        <div class="tab-vip-bg" style="background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80');"></div>
-        <div class="tab-vip-overlay"></div>
-        <div class="tab-vip-content">
-          <div class="tab-vip-icon">
-            <i data-lucide="package"></i>
-          </div>
-          <div class="tab-vip-text">
-            <span class="tab-vip-subtitle">DOĞAL BAKIM & İÇECEKLER</span>
-            <span class="tab-vip-title" data-i18n="tab_products">ÜRÜNLER</span>
-          </div>
-        </div>
-      </button>
+      <!-- Category Switcher Pill Tabs -->
+      <div class="main-tabs-mini">
+        <button class="mini-tab active" data-main-tab="services">
+          <i data-lucide="sparkles"></i>
+          <span data-i18n="tab_services">HİZMETLER</span>
+        </button>
+        <button class="mini-tab" data-main-tab="products">
+          <i data-lucide="package"></i>
+          <span data-i18n="tab_products">ÜRÜNLER</span>
+        </button>
+      </div>
     </div>
 
     <!-- Search Box (Placed directly above Products & Subcategories) -->
@@ -154,6 +192,8 @@
           <i data-lucide="x"></i>
         </button>
       </div>
+    </div>
+
     <!-- Secondary Sub-Category Filter Pills -->
     <div class="sub-category-filters" id="subCategoryFilters">
       <!-- Dynamic Filters populated by JS -->
