@@ -53,7 +53,9 @@ const UI_TRANSLATIONS = {
     qr_menu_title: "Dijital Menü QR",
     qr_sub: "Masalarda Telefonunuzla Okutun",
     call: "Ara",
-    whatsapp_order: "WhatsApp Bilgi & Sipariş"
+    whatsapp_order: "WhatsApp Bilgi & Sipariş",
+    select_lang: "Dil Seçimi",
+    select_curr: "Döviz"
   },
   en: {
     tagline: "TRADITIONAL TURKISH BATH • EST. ANTALYA",
@@ -97,7 +99,9 @@ const UI_TRANSLATIONS = {
     qr_menu_title: "Digital Menu QR",
     qr_sub: "Scan with your phone at tables",
     call: "Call",
-    whatsapp_order: "WhatsApp Inquiry & Order"
+    whatsapp_order: "WhatsApp Inquiry & Order",
+    select_lang: "Language",
+    select_curr: "Currency"
   },
   ru: {
     tagline: "ТРАДИЦИОННЫЙ ТУРЕЦКИЙ ХАМАМ • АЛАНИЯ",
@@ -141,7 +145,9 @@ const UI_TRANSLATIONS = {
     qr_menu_title: "QR Меню",
     qr_sub: "Сканируйте смартфоном",
     call: "Звонок",
-    whatsapp_order: "WhatsApp Заказ"
+    whatsapp_order: "WhatsApp Заказ",
+    select_lang: "Язык",
+    select_curr: "Валюта"
   },
   de: {
     tagline: "TRADITIONELLES TÜRKISCHES BAD • ALANYA",
@@ -185,7 +191,9 @@ const UI_TRANSLATIONS = {
     qr_menu_title: "Digitales Menü QR",
     qr_sub: "Mit dem Smartphone scannen",
     call: "Anrufen",
-    whatsapp_order: "WhatsApp Info & Bestellung"
+    whatsapp_order: "WhatsApp Info & Bestellung",
+    select_lang: "Sprache",
+    select_curr: "Währung"
   }
 };
 

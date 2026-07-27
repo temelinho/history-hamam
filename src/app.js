@@ -4,7 +4,7 @@
 
 let currentLang = 'tr';
 let currentCurrency = 'TRY';
-let currentMainTab = 'all';
+let currentMainTab = 'services'; // Default to HAMAM & SPA HİZMETLERİ (Up-Sell Focus)
 let currentSubCategory = 'all';
 let searchQuery = '';
 let currentSort = 'featured';
@@ -38,55 +38,39 @@ function initApp() {
    ========================================== */
 
 function setupLanguageSelector() {
-  const btn = document.getElementById('langDropdownBtn');
-  const menu = document.getElementById('langMenu');
+  const langBtns = document.querySelectorAll('[data-lang]');
+  langBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentLang = btn.getAttribute('data-lang');
 
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    menu.classList.toggle('show');
-    document.getElementById('currencyMenu').classList.remove('show');
-  });
+      // Update active state on all language buttons (top bar + search section)
+      document.querySelectorAll('[data-lang]').forEach((b) => {
+        b.classList.toggle('active', b.getAttribute('data-lang') === currentLang);
+      });
 
-  menu.querySelectorAll('button').forEach((b) => {
-    b.addEventListener('click', () => {
-      currentLang = b.getAttribute('data-lang');
-      
-      const flagMap = { tr: '🇹🇷', en: '🇬🇧', ru: '🇷🇺', de: '🇩🇪' };
-      document.getElementById('currentLangFlag').textContent = flagMap[currentLang] || '🇹🇷';
-      document.getElementById('currentLangText').textContent = currentLang.toUpperCase();
-      
-      menu.classList.remove('show');
       updateLanguageUI();
       renderSubCategories();
       renderCatalog();
     });
   });
-
-  document.addEventListener('click', () => menu.classList.remove('show'));
 }
 
 function setupCurrencySelector() {
-  const btn = document.getElementById('currencyDropdownBtn');
-  const menu = document.getElementById('currencyMenu');
+  const currBtns = document.querySelectorAll('[data-curr]');
+  currBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentCurrency = btn.getAttribute('data-curr');
 
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    menu.classList.toggle('show');
-    document.getElementById('langMenu').classList.remove('show');
-  });
+      // Update active state on all currency buttons (top bar + search section)
+      document.querySelectorAll('[data-curr]').forEach((b) => {
+        b.classList.toggle('active', b.getAttribute('data-curr') === currentCurrency);
+      });
 
-  menu.querySelectorAll('button').forEach((b) => {
-    b.addEventListener('click', () => {
-      currentCurrency = b.getAttribute('data-curr');
-      const symbol = CURRENCY_RATES[currentCurrency].symbol;
-      document.getElementById('currentCurrency').textContent = `${symbol} ${currentCurrency}`;
-      
-      menu.classList.remove('show');
       renderCatalog();
     });
   });
-
-  document.addEventListener('click', () => menu.classList.remove('show'));
 }
 
 function updateLanguageUI() {
@@ -196,11 +180,11 @@ function setupSearch() {
       input.value = '';
       searchQuery = '';
       clearBtn.style.display = 'none';
-      currentMainTab = 'all';
+      currentMainTab = 'services';
       currentSubCategory = 'all';
 
       document.querySelectorAll('[data-main-tab]').forEach((b) => {
-        b.classList.toggle('active', b.getAttribute('data-main-tab') === 'all');
+        b.classList.toggle('active', b.getAttribute('data-main-tab') === 'services');
       });
 
       renderSubCategories();
