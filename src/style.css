@@ -758,20 +758,22 @@ body {
 
 .landing-category-card .card-media {
   width: 100%;
-  height: 240px;
+  height: 260px;
   overflow: hidden;
   position: relative;
+  background: #0f0d0a;
 }
 
 .landing-category-card .card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.6s ease;
 }
 
 .landing-category-card:hover .card-media img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .landing-category-card .card-banner {
@@ -795,18 +797,30 @@ body {
 }
 
 .card-banner-icon {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(20, 16, 12, 0.6);
+  border: 1px solid rgba(229, 193, 88, 0.6);
   color: #e5c158;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(229, 193, 88, 0.25);
+  transition: all 0.35s ease;
+}
+
+.landing-category-card:hover .card-banner-icon {
+  background: var(--gold-gradient);
+  color: #0c0a08;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 20px rgba(229, 193, 88, 0.55);
 }
 
 .banner-icon-svg {
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
   stroke-width: 1.8;
 }
 
@@ -1772,7 +1786,7 @@ body {
     padding-bottom: 70px;
   }
   
-  .landing-category-card {
-    height: 270px;
+  .landing-category-card .card-media {
+    height: 200px;
   }
 }
