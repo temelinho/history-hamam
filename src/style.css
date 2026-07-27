@@ -341,7 +341,7 @@ body {
 /* Catalog Search Wrapper (Placed directly above products) */
 .catalog-search-wrapper {
   max-width: 680px;
-  margin: 0 auto 24px auto;
+  margin: 0 auto 28px auto;
 }
 
 .btn-nav-intro:hover, .btn-nav-menu:hover {
@@ -909,9 +909,10 @@ body {
 .sub-category-filters {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+  margin-top: 16px;
+  margin-bottom: 30px;
 }
 
 .sub-pill {
