@@ -730,16 +730,16 @@ body {
 }
 
 .landing-cards-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 780px;
   margin: 0 auto;
 }
 
 .landing-category-card {
   position: relative;
-  height: 420px;
+  height: 320px;
   border-radius: 24px;
   overflow: hidden;
   border: 2px solid rgba(212, 175, 55, 0.35);
@@ -1812,5 +1812,9 @@ body {
   
   body {
     padding-bottom: 70px;
+  }
+  
+  .landing-category-card {
+    height: 270px;
   }
 }

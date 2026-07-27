@@ -71,7 +71,7 @@ function openLandingView(updateHistory = true) {
     history.pushState({ view: 'landing' }, '', window.location.pathname);
   }
 
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo(0, 0);
 }
 
 function openCatalogView(category, updateHistory = true) {
@@ -97,7 +97,7 @@ function openCatalogView(category, updateHistory = true) {
 
   renderSubCategories();
   renderCatalog();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo(0, 0);
 }
 
 function handleInitialRoute() {
