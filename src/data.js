@@ -204,207 +204,155 @@ const UI_TRANSLATIONS = {
 const CATALOG_ITEMS = [
   // --- HAMAM & SPA SERVICES ---
   {
-    id: "srv-1",
+    id: "srv-silver",
     mainCategory: "services",
-    subCategory: "hamam_rituals",
-    badge: "Popüler",
-    priceTRY: 1200,
+    subCategory: "silver_package",
+    badge: "Silver Package",
+    priceTRY: 1500,
     duration: 60,
     icon: "sparkles",
     image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
     title: {
-      tr: "Klasik Osmanlı Hamam Paketi",
-      en: "Classic Ottoman Hamam Package",
-      ru: "Классический Османский Хамам",
-      de: "Klassisches Osmanisches Hamam-Paket"
+      tr: "Gümüş Paket (Silver Package) - 60 DK",
+      en: "Silver Package - 60 Min",
+      ru: "Серебряный Пакет (Silver Package) - 60 мин",
+      de: "Silver Paket (Silber-Paket) - 60 Min"
     },
     shortDesc: {
-      tr: "Sauna, Buhar Odası, Geleneksel İpek Kese Peeling ve Bol Köpüklü Masaj.",
-      en: "Sauna, Steam Room, Traditional Silk Kese Exfoliation & Luxurious Foam Massage.",
-      ru: "Сауна, парная, пилинг шелковой рукавицей Кесе и пышный пенный массаж.",
-      de: "Sauna, Dampfbad, seidenes Kese-Peeling und üppige Schaummassage."
+      tr: "60 dakikalık hızlı & ferahlatıcı hamam yenilenmesi. Sauna, Buhar Odası, Jakuzi, Türk Hamamı, Kese, Köpük Masajı, 5 dk Dinlenme ve 20 dk Tüm Vücut Masajı.",
+      en: "Relax your body and mind in just 1 hour! Sauna, Steam Room, Jacuzzi, Turkish Bath, Scrub (kese), Foam Massage, 5 Min Relaxation Area & 20 Min Full Body Massage.",
+      ru: "Расслабление тела и ума всего за 1 час! Сауна, парная, джакузи, хамам, пилинг кесе, пенный массаж, 5 мин отдыха и 20 мин массаж всего тела.",
+      de: "Erholung für Körper und Geist in nur 1 Stunde! Sauna, Dampfbad, Whirlpool, Türkisches Bad, Kese-Peeling, Schaummassage, 5 Min Ruhebereich & 20 Min Ganzkörpermassage."
     },
     longDesc: {
-      tr: "Göbek taşında ısınma ile başlayan bu klasik ritüel, gözeneklerinizin açılmasını sağlar. Ardından geleneksel ipek kese ile ölü derilerden arındırma işlemi yapılır. Saf zeytinyağlı sabun köpüğü ile yapılan rahatlatıcı köpük masajı ve dinlenme alanındaki ikramımızla tamamlanır.",
-      en: "Starting with warming up on the heated marble stone (Göbek Taşı), this ritual opens pores. It continues with deep exfoliation using a silk kese glove, followed by a relaxing foam massage with organic olive soap bubbles and refreshing tea service.",
-      ru: "Процедура начинается с прогрева на мраморном чебек-таши. Затем мастер очищает кожу рукавицей Кесе, после чего следует расслабляющий пенный массаж на натуральном оливковом мыле.",
-      de: "Das Ritual beginnt mit dem Erwärmen auf dem Nabelstein. Es folgt ein gründliches Kese-Peeling und eine entspannende Schaummassage mit Olivenölseifenschaum."
+      tr: "Uçuş sonrası veya plaj günü ardından tazelenmek isteyenler için ideal 1 saatlik hızlı yenilenme paketi. Cedar ağacı saunası ve nemli buhar odasında kasların gevşemesi ile başlayan ritüel, jakuzi rahatlaması ve mermer göbek taşında geleneksel kese & köpük yıkaması ile devam eder. 5 dakikalık nefes dinlenme molasının ardından 20 dakikalık tüm vücut masajı ile gerginliğiniz tamamen giderilir.",
+      en: "Relax your body and mind in just 1 hour! Ideal for those who want to refresh after a long flight or a sunny beach day. Let all the stress melt away in a peaceful, authentic atmosphere. Includes warm cedar sauna, steam room, jacuzzi, traditional Turkish bath with full-body kese scrub & foam wash, 5 minutes pause in relaxation area, and a soothing 20-minute full body massage.",
+      ru: "Идеально подходит для тех, кто хочет освежиться после долгого перелета или дня на пляже. Снимите весь стресс в спокойной аутентичной атмосфере. Включает кедровую сауну, парную, джакузи, традиционный хамам с пилингом кесе и пенным массажем, 5 минут отдыха и 20 минут расслабляющего массажа всего тела.",
+      de: "Entspannen Sie Körper und Geist in nur 1 Stunde! Ideal zum Erfrischen nach einem langen Flug oder Strandtag. Lassen Sie den Stress in friedlicher Atmosphäre schmelzen. Inklusive Zedernholz-Sauna, Dampfbad, Whirlpool, traditionellem Hamam mit Kese-Peeling & Schaumbad, 5 Min Ruhebereich und 20 Min Ganzkörpermassage."
     },
     included: {
-      tr: ["Sauna & Buhar Odası (20 dk)", "Göbek Taşında Isınma", "Tüm Vücut İpek Kese Peeling", "Geleneksel Köpük Masajı", "Sıcak/Soğuk İkram (Çay/Maden Suyu)"],
-      en: ["Sauna & Steam Room (20 mins)", "Warm Marble Stone Relaxation", "Full Body Silk Kese Exfoliation", "Traditional Foam Soap Massage", "Complimentary Tea or Mineral Water"],
-      ru: ["Сауна и парная (20 мин)", "Прогрев на мраморном столе", "Пилинг всего тела рукавицей Кесе", "Пенный массаж оливковым мылом", "Чай или минеральная вода"],
-      de: ["Sauna & Dampfbad (20 Min)", "Aufwärmen auf dem Marmorstein", "Seiden-Kese Ganzkörper-Peeling", "Klassische Schaummassage", "Gratis Tee oder Mineralwasser"]
+      tr: [
+        "1. Sauna (Ahşap sedir sıcaklığı ile kasları gevşetme)",
+        "2. Buhar Odası (Nemli sıcaklık & solunum tazeleme)",
+        "3. Jakuzi (Sıcak su masaj jetleri ile rahatlama)",
+        "4. Türk Hamamı (Isıtılmış mermer göbek taşı ritüeli)",
+        "5. Kese (Tüm vücut ölü deri arındırma)",
+        "6. Köpük Masajı (Bol sabun köpüğü ile yıkanma)",
+        "7. Dinlenme Alanı (5 Dakikalık nefes molası)",
+        "8. 20 Dakika Tüm Vücut Masajı (Kas gerginliğini giderici masaj)"
+      ],
+      en: [
+        "1. Sauna (Warm cedar heat to open the body)",
+        "2. Steam room (Gentle moist heat to relax muscles)",
+        "3. Jacuzzi (Warm water jets ease tension)",
+        "4. Turkish bath (Traditional hammam ritual on marble stone)",
+        "5. Scrub (kese) (Full-body exfoliation)",
+        "6. Foam massage (Soft soapy wash-down)",
+        "7. Relaxation area (5 minutes pause to breathe)",
+        "8. 20 Minutes Full Body Massage (Calming massage to release tension)"
+      ],
+      ru: [
+        "1. Сауна (Кедровая сауна для разогрева)",
+        "2. Парная (Влажный пар для очищения поров)",
+        "3. Джакузи (Массажные водные струи)",
+        "4. Турецкий хамам (Ритуал на теплом мраморе)",
+        "5. Пилинг (Кесе) (Очищение кожи всего тела)",
+        "6. Пенный массаж (Пенный уход с оливковым мылом)",
+        "7. Зона отдыха (5 минут паузы)",
+        "8. 20 Минут Массаж всего тела (Снятие напряжения)"
+      ],
+      de: [
+        "1. Sauna (Zedernholzwärme zum Muskelentspannen)",
+        "2. Dampfbad (Sanfte feuchte Wärme)",
+        "3. Whirlpool (Warmwasser-Jets)",
+        "4. Türkisches Bad (Marmorstein-Ritual)",
+        "5. Peeling (Kese) (Ganzkörper-Peeling)",
+        "6. Schaummassage (Weiches Schaumbad)",
+        "7. Ruhebereich (5 Minuten Pause)",
+        "8. 20 Minuten Ganzkörpermassage (Entspannungsmassage)"
+      ]
     }
   },
   {
-    id: "srv-2",
+    id: "srv-gold",
     mainCategory: "services",
-    subCategory: "vip_packages",
-    badge: "VIP Sultan",
-    priceTRY: 2500,
-    duration: 120,
+    subCategory: "gold_package",
+    badge: "Gold Package (Popüler)",
+    priceTRY: 2800,
+    duration: 90,
     icon: "crown",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
     title: {
-      tr: "VIP Sultan Osmanlı Ritüeli",
-      en: "VIP Sultan Ottoman Ritual",
-      ru: "VIP Ритуал Султана",
-      de: "VIP Sultan Osmanisches Ritual"
+      tr: "Gold Paket (Gold Package) - 90 / 120 DK",
+      en: "Gold Package - 90 / 120 Min",
+      ru: "Золотой Пакет (Gold Package) - 90 / 120 мин",
+      de: "Gold Paket (Gold-Paket) - 90 / 120 Min"
     },
     shortDesc: {
-      tr: "Hamam + Kese & Köpük + 45 dk Aromaterapi Masajı + Kil Maskesi + Türk Kahvesi & Meyve Tabağı.",
-      en: "Full Hamam + Kese & Foam + 45 min Aromatherapy Massage + Volcanic Clay Mask + Coffee & Fruit Platter.",
-      ru: "Хамам + Кесе и Пена + 45 мин Аромамассаж + Глиняная маска + Турецкий кофе и фрукты.",
-      de: "Hamam + Kese & Schaum + 45 Min Aromatherapie-Massage + Heilerde-Maske + Kaffee & Früchte."
+      tr: "Derinlemesine lüks spa ve hamam yenilenmesi. Sauna, Buhar Odası, Jakuzi, Türk Hamamında Kese, Kahve / Tuz Peeling, Köpük Masajı, Çay & Meyve İkramı, 10 dk Ayak Masajı, 1 Saat Mix Terapi Vücut Masajı ve Gold Yüz Maskesi.",
+      en: "A full-body renewal experience! Sauna, Steam Room, Jacuzzi, Turkish Bath Scrub (kese), Salt/Coffee Peeling, Foam Massage, Tea & Fruit in Relax Area, 10 Min Foot Massage, 1 Hour Mix Therapy Full Body Massage & Gold Mask.",
+      ru: "Королевское обновление всего тела! Сауна, парная, джакузи, хамам, пилинг (кесе), солевой/кофейный скраб, пенный массаж, чай и фрукты, 10 мин массаж ног, 1 час микс-массаж и золотая маска.",
+      de: "Exklusives Ganzkörper-Verwöhnerlebnis! Sauna, Dampfbad, Whirlpool, Türkisches Bad, Peeling (Kese), Salz/Kaffee-Peeling, Schaummassage, Tee & Früchte im Ruhebereich, 10 Min Fußmassage, 1 Std. Mix-Therapie Massage & Goldmaske."
     },
     longDesc: {
-      tr: "History Hamam'ın en sevilen krallara layık paketi. Hamamda derin kese ve köpük banyosu sonrası, özel aroma yağları ile 45 dakikalık tüm vücut masajı uygulanır. Cildinizi besleyen volkanik mineral kil maskesi ve dinlenme salonumuzda özel meyve tabağı ve Türk kahvesi ikram edilir.",
-      en: "Our flagship royal package. After deep hamam cleansing and foam massage, indulge in a 45-minute full body aromatherapy massage with essential oils. Finished with a mineral face clay mask, fresh fruit platter, and authentic Turkish coffee.",
-      ru: "Наш главный королевский пакет. Полное очищение в хамаме с пеной, затем 45 минут ароматерапевтического массажа тела. В завершение — питательная глиняная маска для лица, фруктовая тарелка и кофе.",
-      de: "Unser exklusives Wohlfühlpaket: Erstklassiges Hamam-Peeling und Schaummassage, gefolgt von einer 45-minütigen Ganzkörper-Aromatherapiemassage, Gesichtsmaske sowie Früchteteller und Kaffee."
+      tr: "History Hamam'ın en popüler ve kapsamlı lüks paket deneyimi. Ahşap sedir saunası, buhar odası ve jakuzide vücudun tamamen gevşetilmesinin ardından ısıtılmış göbek taşında geleneksel ipek kese ve cildi pürüzsüzleştiren kahve/tuz peelingi uygulanır. Bol sabun köpüğü masajının ardından dinlenme alanımızda taze meyve ve sıcak çay ikram edilir. Ardından 10 dakikalık rahatlatıcı ayak masajı, 1 saatlik (90 dk opsiyonlu) medikal mix terapisi tüm vücut masajı ve ışıltı kazandıran Gold yüz maskesi ile mükemmel spa yolculuğunuz tamamlanır.",
+      en: "A full-body renewal experience. Enjoy deep relaxation with natural treatments and luxurious care. Perfect for couples or guests looking for a premium spa experience. Includes cedar sauna, steam room, jacuzzi, heated marble Turkish bath, silk kese scrub, mineral salt/coffee peeling, soft foam massage, tea & fruit in relax area, 10 minutes foot massage, 1 hour Mix Therapy Full Body Massage, and a gold mask to finish your journey.",
+      ru: "Комплексный премиальный СПА-ритуал для полного восстановления сил. Отлично подходит для пар и ценителей высокого уровня отдыха. Включает сауну, парную, джакузи, традиционный хамам на мраморе, пилинг кесе, солевой/кофейный скраб, пенный массаж, фрукты и чай в зоне отдыха, 10 минут массажа ног, 1 час комплексного массажа тела (Mix Therapy) и золотую маску для лица.",
+      de: "Ein vollständiges Verwöhnerlebnis für Körper und Geist. Genießen Sie tiefste Entspannung mit natürlichen Behandlungen. Inklusive Zedernholz-Sauna, Dampfbad, Whirlpool, Türkischem Bad auf dem Marmorstein, Seidenkese, Salz/Kaffee-Peeling, Schaummassage, Tee & frischen Früchten im Ruhebereich, 10 Minuten Fußmassage, 1 Stunde Mix-Therapie Ganzkörpermassage und einer strahlenden Gold-Gesichtsmaske."
     },
     included: {
-      tr: ["Tüm Klasik Hamam İşlemleri", "Tüm Vücut İpek Kese & Köpük", "45 dk Aromaterapi Masajı", "Yüz için Volkanik Kil Maskesi", "Özel Taze Meyve Tabağı", "Köpüklü Türk Kahvesi & Lokum"],
-      en: ["All Classic Hamam Facilities", "Full Body Kese & Foam Bath", "45 min Full Body Aromatherapy Massage", "Mineral Face Clay Mask", "Fresh Fruit Platter Service", "Turkish Coffee & Turkish Delight"],
-      ru: ["Все процедуры хамама", "Пилинг Кесе и Пенный барьер", "45 мин Ароматерапевтический массаж", "Минеральная маска для лица", "Фруктовое ассорти", "Турецкий кофе с рахат-лукумом"],
-      de: ["Alle Hamam-Leistungen", "Seidenpeeling & Schaumbad", "45 Min Aromatherapie-Massage", "Gesichtsmaske aus Heilerde", "Frischer Früchteteller", "Türkischer Kaffee mit Lokum"]
-    }
-  },
-  {
-    id: "srv-3",
-    mainCategory: "services",
-    subCategory: "massages",
-    badge: "Rahatlatıcı",
-    priceTRY: 1600,
-    duration: 50,
-    icon: "heart-handshake",
-    image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Aromaterapi Bitkisel Masaj",
-      en: "Herbal Aromatherapy Massage",
-      ru: "Ароматерапевтический Массаж",
-      de: "Aromatherapie-Kräutermassage"
-    },
-    shortDesc: {
-      tr: "Doğal portakal, lavanta ve okaliptüs yağlarıyla tüm vücut rahatlama masajı.",
-      en: "Full body relaxation massage using natural lavender, orange, and eucalyptus essential oils.",
-      ru: "Расслабляющий массаж всего тела с эфирными маслами лаванды, апельсина и эвкалипта.",
-      de: "Entspannende Ganzkörpermassage mit natürlichen Lavendel-, Orangen- und Eukalyptusölen."
-    },
-    longDesc: {
-      tr: "Stresi ve kas gerginliğini azaltmak için özel olarak hazırlanan organik bitki özlü yağlar ile baş, boyun, sırt ve bacak bölgesine uygulanan hafif-orta şiddette rahatlatıcı masaj.",
-      en: "Designed to melt stress and muscle stiffness using organic cold-pressed essential oils. Applied gently across head, shoulders, back, and legs.",
-      ru: "Массаж средней степени нажатия с органическими маслами, снимающий стресс, усталость и мышечные зажимы по всему телу.",
-      de: "Sanfte bis mittelfeste Ganzkörpermassage zur Befreiung von Stress und Verspannungen mit biologischen Ätherischen Ölen."
-    },
-    included: {
-      tr: ["50 Dakika Tüm Vücut Masajı", "Kişiye Özel Aroma Yağı Seçimi", "Dinlendiren Sıcak Havlu Terapisi", "Bitki Çayı İkramı"],
-      en: ["50 mins Full Body Massage", "Choice of Essential Oil Blend", "Warm Towel Therapy", "Herbal Tea Service"],
-      ru: ["50 минут массажа всего тела", "Выбор ароматического масла", "Прогрев горячими полотенцами", "Травяной чай"],
-      de: ["50 Min Ganzkörpermassage", "Individuelle Öl-Auswahl", "Warme Handtuch-Therapie", "Gratis Kräutertee"]
-    }
-  },
-  {
-    id: "srv-4",
-    mainCategory: "services",
-    subCategory: "massages",
-    badge: "Medikal",
-    priceTRY: 1800,
-    duration: 50,
-    icon: "activity",
-    image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Derin Doku (Deep Tissue) Medikal Masaj",
-      en: "Deep Tissue Medical Massage",
-      ru: "Глубокотканный Медицинский Массаж",
-      de: "Tiefengewebe-Medizinmassage"
-    },
-    shortDesc: {
-      tr: "Kronik kas ağrıları, tutulmalar ve kulunçlar için yoğun baskılı medikal seans.",
-      en: "Intensive deep pressure massage focusing on chronic muscle pain and tension knots.",
-      ru: "Интенсивный массаж глубоких мышц при болях в спине, мышечных зажимах и узелках.",
-      de: "Intensive Massage mit tiefem Druck bei chronischen Rückenschmerzen und Verspannungen."
-    },
-    longDesc: {
-      tr: "Uzman medikal masörlerimiz tarafından kas dokularına derinlemesine nüfuz eden baskı teknikleri uygulanır. Özellikle sırt, bel ve omuz kulunçlarını çözmede son derece etkilidir.",
-      en: "Performed by certified medical masseurs. Uses firm pressure techniques to work through deep muscle layers, targeting knots, lower back pain, and shoulder tension.",
-      ru: "Выполняется профессиональными медицинскими массажистами. Прорабатывает глубокие слои мышц, эффективно устраняя боли в пояснице и шее.",
-      de: "Durchgeführt von medizinischen Spezialisten. Zielt auf die tiefen Muskelschichten ab, um hartnäckige Verspannungen im Rücken zu lösen."
-    },
-    included: {
-      tr: ["50 dk Yoğun Derin Doku Masajı", "Kulunç Kırma & Bağ Dokusu Çalışması", "Kafur & Biberiye Yağı Uygulaması"],
-      en: ["50 mins Deep Muscle Massage", "Knot Release & Trigger Point Therapy", "Camphor & Rosemary Warm Oil"],
-      ru: ["50 мин глубокого массажа", "Проработка триггерных точек", "Согревающее розмариновое масло"],
-      de: ["50 Min Tiefengewebemassage", "Triggerpunkt-Behandlung", "Erwärmendes Rosmarinöl"]
-    }
-  },
-  {
-    id: "srv-5",
-    mainCategory: "services",
-    subCategory: "skin_care",
-    badge: "Detoks",
-    priceTRY: 800,
-    duration: 30,
-    icon: "smile",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Volkanik Kil Maskesi & Yüz Bakımı",
-      en: "Volcanic Mineral Clay Facial",
-      ru: "Маска из Вулканической Глины",
-      de: "Vulkanheilerde Gesichtsbehandlung"
-    },
-    shortDesc: {
-      tr: "Gözenek sıkılaştırıcı, leke karşıtı doğal volkanik kil maskesi ve gülsuyu nemlendirme.",
-      en: "Pore-tightening natural volcanic clay mask followed by organic rosewater hydration.",
-      ru: "Очищающая маска из натуральной глины для сужения пор и увлажнение розовой водой.",
-      de: "Porenverfeinernde Heilerde-Gesichtsmaske mit Rosenwasser-Feuchtigkeitspflege."
-    },
-    longDesc: {
-      tr: "Hamam buharıyla yumuşayan cildinize uygulanan doğal volkanik kil maskesi, fazla yağı absorbe eder ve gözenekleri derinlemesine temizler. Gülsuyu toniği ve nemlendirici kremlerle ışıltı kazanır.",
-      en: "Applied after steam bath, this natural mineral clay pulls impurities from skin pores. Completed with soothing organic rosewater and hydrating cream.",
-      ru: "Наносится на распаренную кожу лица. Глина глубоко очищает поры и выравнивает тон лица. Завершается тонизированием розовой водой.",
-      de: "Reinigt die Hautporen nach dem Dampfbad tiefenwirksam. Abgerundet mit reinem Rosenwasser und Feuchtigkeitscreme."
-    },
-    included: {
-      tr: ["Sıcak Havlu Kompresi", "Doğal Volkanik Kil Maskesi (20 dk)", "Organik Gülsuyu Toniği", "Nemlendirici Yüz Masajı"],
-      en: ["Hot Towel Compression", "Natural Mineral Clay Mask (20 mins)", "Organic Rosewater Tonic", "Hydrating Face Touch"],
-      ru: ["Компресс горячим полотенцем", "Натуральная маска из глины (20 мин)", "Розовая вода", "Увлажняющий массаж лица"],
-      de: ["Warmes Handtuch-Kompresse", "Vulkanheilerde Maske (20 Min)", "Rosenwasser-Tonikum", "Feuchtigkeits-Gesichtsmassage"]
-    }
-  },
-  {
-    id: "srv-6",
-    mainCategory: "services",
-    subCategory: "skin_care",
-    badge: "Yenileyici",
-    priceTRY: 950,
-    duration: 35,
-    icon: "coffee",
-    image: "https://images.unsplash.com/photo-1512290900676-26c2a4d0b5ae?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Kahve Peeling Vücut Bakımı",
-      en: "Turkish Coffee Body Scrub",
-      ru: "Кофейный Пилинг Тела",
-      de: "Türkisches Kaffee-Körperpeeling"
-    },
-    shortDesc: {
-      tr: "Taze çekilmiş Türk kahvesi ve tatlı badem yağı ile selülit karşıtı vücut peelingi.",
-      en: "Anti-cellulite body scrub using freshly ground Turkish coffee and sweet almond oil.",
-      ru: "Антицеллюлитный пилинг тела из молотого турецкого кофе и миндального масла.",
-      de: "Anti-Cellulite Körperpeeling mit frisch gemahlenem türkischem Kaffee und Mandelöl."
-    },
-    longDesc: {
-      tr: "Kahve çekirdeklerindeki doğal kafein, kan dolaşımını hızlandırır ve pürüzsüz bir cilt sağlar. Hamam sonrası uygulandığında kadifemsi yumuşaklık verir.",
-      en: "Natural caffeine in coffee grounds stimulates blood circulation and firms skin. Leaves the body feeling silky smooth and deliciously scented.",
-      ru: "Кофеин стимулирует микроциркуляцию и выравнивает рельеф кожи, придавая ей шелковистость и прекрасный аромат.",
-      de: "Das Koffein regt die Durchblutung an und sorgt für straffe, seidenweiche Haut nach dem Hamambad."
-    },
-    included: {
-      tr: ["Tüm Vücut Kahve Scrub Peeling", "Tatlı Badem Yağı Nemlendirme", "Hamam Durulama Ritüeli"],
-      en: ["Full Body Coffee Scrub Exfoliation", "Sweet Almond Oil Hydration", "Hamam Rinse Ritual"],
-      ru: ["Кофейный скраб всего тела", "Увлажнение миндальным маслом", "Ополаскивание в хамаме"],
-      de: ["Ganzkörper Kaffee-Peeling", "Pflege mit süßem Mandelöl", "Hamam-Spülung"]
+      tr: [
+        "1. Sauna (Ahşap sedir sıcaklığı ile gevşeme)",
+        "2. Buhar Odası (Nemli sıcaklık & kas rahatlatma)",
+        "3. Jakuzi (Sıcak su masaj jetleri ile gerginlik giderme)",
+        "4. Türk Hamamı (Geleneksel mermer göbek taşı ritüeli)",
+        "5. Kese (Tüm vücut ölü deri arındırma)",
+        "6. Kahve & Tuz Peeling (Cildi pürüzsüzleştiren mineral peeling)",
+        "7. Köpük Masajı (Saf sabun köpüğü yıkaması)",
+        "8. Dinlenme Alanında İkram (Çay ve taze meyve ikramı)",
+        "9. 10 Dakika Ayak Masajı (Yorgun ayakları rahatlatıcı masaj)",
+        "10. 1 Saat Mix Terapi / Medikal Vücut Masajı (Tüm vücut masajı)",
+        "11. Gold Yüz Maskesi (Cilde ışıltı kazandıran altın maske)"
+      ],
+      en: [
+        "1. Sauna (Warm cedar heat to open the body and begin unwinding)",
+        "2. Steam room (Gentle moist heat to relax muscles)",
+        "3. Jacuzzi (Warm water jets ease tension through whole body)",
+        "4. Turkish bath (Traditional hammam ritual on heated marble stone)",
+        "5. Scrub (kese) (Full-body exfoliation to refresh and soften skin)",
+        "6. Salt / Coffee Peeling (Mineral-rich scrub to smooth and renew skin)",
+        "7. Foam massage (Soft soapy wash-down)",
+        "8. Tea & Fruit in Relax Area (Unwind with tea and fresh fruit)",
+        "9. 10 Minutes Foot Massage (Soothing massage to relieve tired feet)",
+        "10. 1 Hour Mix Therapy Full Body Massage (Comprehensive full-body massage blending techniques)",
+        "11. Gold Mask (Radiance-boosting gold mask to finish your journey)"
+      ],
+      ru: [
+        "1. Сауна (Кедровая сауна для расслабления)",
+        "2. Парная (Влажный пар для мышц)",
+        "3. Джакузи (Водные струи для снятия напряжения)",
+        "4. Турецкий хамам (Ритуал на теплом мраморе)",
+        "5. Пилинг (Кесе) (Глубокое очищение кожи)",
+        "6. Кофейно-солевой пилинг (Обновление и гладкость кожи)",
+        "7. Пенный массаж (Пенное умывание)",
+        "8. Чай и фрукты в зоне отдыха (Отдых и угощение)",
+        "9. 10 Минут Массаж ног (Расслабление уставших ног)",
+        "10. 1 Час Микс-Терапевтический Массаж (Массаж всего тела)",
+        "11. Золотая Маска (Омолаживающая золотая маска)"
+      ],
+      de: [
+        "1. Sauna (Zedernholzwärme zum Entspannen)",
+        "2. Dampfbad (Sanfte feuchte Wärme)",
+        "3. Whirlpool (Warmwasser-Jets)",
+        "4. Türkisches Bad (Marmorstein-Ritual)",
+        "5. Peeling (Kese) (Ganzkörper-Hautreinigung)",
+        "6. Salz- & Kaffee-Peeling (Mineral-Peeling)",
+        "7. Schaummassage (Weiches Schaumbad)",
+        "8. Tee & Früchte im Ruhebereich (Erfrischende Pause)",
+        "9. 10 Minuten Fußmassage (Wohltuende Fußpflege)",
+        "10. 1 Std. Mix-Therapie Ganzkörpermassage (Intensive Ganzkörpermassage)",
+        "11. Gold-Gesichtsmaske (Strahlende Goldmaske)"
+      ]
     }
   },
 
@@ -978,11 +926,9 @@ const CATALOG_ITEMS = [
 
 const SUB_CATEGORIES = {
   services: [
-    { key: 'all', label: { tr: 'Tüm Hizmetler', en: 'All Services', ru: 'Все услуги', de: 'Alle Angebote' } },
-    { key: 'hamam_rituals', label: { tr: 'Hamam Ritüelleri', en: 'Hamam Rituals', ru: 'Ритуалы хамама', de: 'Hamam Rituale' } },
-    { key: 'vip_packages', label: { tr: 'VIP Paketler', en: 'VIP Packages', ru: 'VIP Пакеты', de: 'VIP Pakete' } },
-    { key: 'massages', label: { tr: 'Masajlar', en: 'Massages', ru: 'Массажи', de: 'Massagen' } },
-    { key: 'skin_care', label: { tr: 'Cilt Bakımları', en: 'Facial & Scrub', ru: 'Уход за кожей', de: 'Gesicht & Peeling' } }
+    { key: 'all', label: { tr: 'Tüm Paketler', en: 'All Packages', ru: 'Все пакеты', de: 'Alle Pakete' } },
+    { key: 'silver_package', label: { tr: 'Gümüş Paket (Silver)', en: 'Silver Package', ru: 'Серебряный Пакет', de: 'Silver Paket' } },
+    { key: 'gold_package', label: { tr: 'Gold Paket (Gold)', en: 'Gold Package', ru: 'Золотой Пакет', de: 'Gold Paket' } }
   ],
   products: [
     { key: 'all', label: { tr: 'Tüm Ürünler', en: 'All Products', ru: 'Все товары', de: 'Alle Produkte' } },
