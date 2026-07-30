@@ -772,6 +772,19 @@ body {
   background: #0f0d0a;
 }
 
+.landing-category-card .card-media::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 110px;
+  background: linear-gradient(to bottom, rgba(98, 83, 34, 0) 0%, rgba(98, 83, 34, 0.4) 40%, rgba(98, 83, 34, 0.9) 85%, #625322 100%);
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
 .landing-category-card .card-media img {
   width: 100%;
   height: 100%;
@@ -785,12 +798,15 @@ body {
 }
 
 .landing-category-card .card-banner {
-  background: #625322; /* Warm Olive Gold matching reference screenshot */
+  background: linear-gradient(180deg, #625322 0%, #4a3f19 100%);
   padding: 22px 26px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  position: relative;
+  z-index: 3;
+  margin-top: -1px;
 }
 
 .card-banner-title {
