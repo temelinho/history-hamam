@@ -412,7 +412,7 @@ function renderCatalog() {
 
     card.innerHTML = `
       <div class="card-image-wrap">
-        <img src="${item.image}" alt="${titleText}" class="card-image" loading="lazy" />
+        <img src="${item.image}" alt="${titleText}" class="card-image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80';" />
         ${item.badge ? `<span class="card-badge">${item.badge}</span>` : ''}
         ${durationHTML}
       </div>
@@ -508,7 +508,7 @@ function openModal(item) {
 
   content.innerHTML = `
     <div class="modal-img-wrapper">
-      <img src="${item.image}" alt="${titleText}" />
+      <img src="${item.image}" alt="${titleText}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80';" />
     </div>
     <div class="modal-inner">
       <div class="modal-header-info">

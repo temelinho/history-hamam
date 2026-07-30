@@ -590,7 +590,7 @@ const CATALOG_ITEMS = [
     badge: "Anti-Age",
     priceTRY: 700,
     icon: "sparkles",
-    image: "https://images.unsplash.com/photo-1570194065650-d99fb4a38691?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=800&q=80",
     title: {
       tr: "Kolajen Serum",
       en: "Collagen Serum",
@@ -722,7 +722,7 @@ const CATALOG_ITEMS = [
     badge: "Set",
     priceTRY: 1200,
     icon: "package",
-    image: "https://images.unsplash.com/photo-1556228841-a3c527ebefe5?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80",
     title: {
       tr: "Face Routine Set",
       en: "Face Routine Set",
@@ -821,7 +821,7 @@ const CATALOG_ITEMS = [
     badge: "Peeling",
     priceTRY: 450,
     icon: "sparkles",
-    image: "https://images.unsplash.com/photo-1570194065650-d99fb4a38691?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",
     title: {
       tr: "Aromatic Salt Peeling",
       en: "Aromatic Salt Peeling",
