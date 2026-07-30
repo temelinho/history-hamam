@@ -340,6 +340,7 @@ body {
 
 /* Catalog Search Wrapper (Placed directly above products) */
 .catalog-search-wrapper {
+  display: none !important;
   max-width: 680px;
   margin: 0 auto 28px auto;
 }
@@ -872,7 +873,7 @@ body {
 
 /* Mini Tab Switcher in Catalog View */
 .main-tabs-mini {
-  display: flex;
+  display: none !important;
   align-items: center;
   gap: 8px;
 }
@@ -1100,7 +1101,7 @@ body {
 
 /* Sub-category Pills */
 .sub-category-filters {
-  display: flex;
+  display: none !important;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
@@ -1133,7 +1134,7 @@ body {
 
 /* Status Bar & Sort */
 .catalog-status {
-  display: flex;
+  display: none !important;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;

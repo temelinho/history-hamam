@@ -208,7 +208,7 @@ const CATALOG_ITEMS = [
     mainCategory: "services",
     subCategory: "silver_package",
     badge: "Silver Package",
-    priceTRY: 1500,
+    priceTRY: 580,
     duration: 60,
     icon: "sparkles",
     image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
@@ -278,7 +278,7 @@ const CATALOG_ITEMS = [
     mainCategory: "services",
     subCategory: "gold_package",
     badge: "Gold Package (Popüler)",
-    priceTRY: 2800,
+    priceTRY: 1730,
     duration: 90,
     icon: "crown",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
@@ -355,109 +355,434 @@ const CATALOG_ITEMS = [
       ]
     }
   },
+  {
+    id: "srv-luxury",
+    mainCategory: "services",
+    subCategory: "luxury_package",
+    badge: "✦ VIP Luxury",
+    priceTRY: 2310,
+    duration: 150,
+    icon: "gem",
+    image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80",
+    title: {
+      tr: "Luxury Paket (Diamond) - 150 DK",
+      en: "Luxury Package (Diamond) - 150 Min",
+      ru: "Люкс Пакет (Diamond) - 150 мин",
+      de: "Luxury Paket (Diamond) - 150 Min"
+    },
+    shortDesc: {
+      tr: "En üst düzey VIP hamam & spa deneyimi. Sauna, Buhar Odası, Jakuzi, Türk Hamamı, Kese, Kahve/Tuz Peeling, Köpük Masajı, Çay & Meyve İkramı, Ayak Masajı, 1 Saat Mix Terapi Masajı, Gold Yüz Maskesi, Aromaterapi Yağ Masajı ve VIP Dinlenme.",
+      en: "The ultimate VIP hammam & spa experience. Sauna, Steam Room, Jacuzzi, Turkish Bath, Kese Scrub, Salt/Coffee Peeling, Foam Massage, Tea & Fruit Service, Foot Massage, 1 Hour Mix Therapy Massage, Gold Face Mask, Aromatherapy Oil Massage & VIP Relaxation.",
+      ru: "Ультра-люксовый VIP-ритуал хамама и СПА. Сауна, парная, джакузи, хамам, пилинг кесе, кофейно-солевой скраб, пенный массаж, чай и фрукты, массаж ног, 1 час микс-массаж, золотая маска, аромамассаж и VIP-зона.",
+      de: "Das ultimative VIP-Hamam & Spa-Erlebnis. Sauna, Dampfbad, Whirlpool, Türkisches Bad, Kese-Peeling, Salz/Kaffee-Peeling, Schaummassage, Tee & Obst, Fußmassage, 1 Std. Mix-Therapie, Goldmaske, Aromatherapie-Ölmassage & VIP-Ruhebereich."
+    },
+    longDesc: {
+      tr: "History Hamam'ın en prestijli ve kapsamlı VIP deneyimi. 2.5 saatlik bu özel ritüelde, tüm Gold Paket hizmetlerine ek olarak aromaterapi yağı ile derin kas masajı, genişletilmiş VIP dinlenme süresi ve özel ikramlar sunulur. Saray hamamlarından ilham alan bu deneyim, baştan sona lüks ve huzur vaat eder. Çay, taze meyve ve soğuk içecek ikramımız dahildir.",
+      en: "History Hamam's most prestigious and comprehensive VIP experience. This exclusive 2.5-hour ritual includes everything in the Gold Package plus deep aromatherapy oil massage, extended VIP relaxation time, and exclusive refreshments. Inspired by Ottoman palace hammams, this experience promises luxury and tranquility from start to finish. Tea, fresh fruit and cold beverage service included.",
+      ru: "Самый престижный и комплексный VIP-ритуал History Hamam. 2,5-часовой эксклюзивный ритуал включает всё из Золотого пакета, плюс глубокий массаж с ароматическими маслами, расширенную VIP-зону отдыха и эксклюзивные угощения. Чай, фрукты и прохладительные напитки включены.",
+      de: "History Hamams prestigeträchtigstes VIP-Erlebnis. Dieses exklusive 2,5-Stunden-Ritual beinhaltet alles aus dem Gold-Paket plus Tiefenentspannungs-Aromatherapie-Massage, erweiterte VIP-Ruhezeit und exklusive Erfrischungen. Tee, frisches Obst und Kaltgetränkeservice inklusive."
+    },
+    included: {
+      tr: [
+        "1. Sauna (Ahşap sedir sıcaklığı ile derin gevşeme)",
+        "2. Buhar Odası (Nemli sıcaklık & kas rahatlatma)",
+        "3. Jakuzi (Sıcak su masaj jetleri ile gerginlik giderme)",
+        "4. Türk Hamamı (Geleneksel mermer göbek taşı ritüeli)",
+        "5. Kese (Tüm vücut ölü deri arındırma)",
+        "6. Kahve & Tuz Peeling (Cildi pürüzsüzleştiren mineral peeling)",
+        "7. Köpük Masajı (Saf sabun köpüğü yıkaması)",
+        "8. Çay & Meyve İkramı (Dinlenme alanında sıcak çay ve taze meyve)",
+        "9. 10 Dakika Ayak Masajı (Yorgun ayakları rahatlatıcı masaj)",
+        "10. 1 Saat Mix Terapi Vücut Masajı (Tüm vücut derin doku masajı)",
+        "11. Gold Yüz Maskesi (Cilde ışıltı kazandıran altın maske)",
+        "12. Aromaterapi Yağ Masajı (Rahatlatıcı doğal yağlarla özel masaj)",
+        "13. VIP Dinlenme Alanı (Genişletilmiş özel dinlenme süresi)",
+        "14. Soğuk İçecek İkramı (Su ve soda dahil)"
+      ],
+      en: [
+        "1. Sauna (Deep relaxation in warm cedar heat)",
+        "2. Steam Room (Gentle moist heat to relax muscles)",
+        "3. Jacuzzi (Warm water jets ease tension through whole body)",
+        "4. Turkish Bath (Traditional hammam ritual on heated marble stone)",
+        "5. Scrub (Kese) (Full-body exfoliation to refresh and soften skin)",
+        "6. Salt / Coffee Peeling (Mineral-rich scrub to smooth and renew skin)",
+        "7. Foam Massage (Luxurious soapy wash-down)",
+        "8. Tea & Fruit Service (Hot tea and fresh seasonal fruit in relax area)",
+        "9. 10 Minutes Foot Massage (Soothing massage to relieve tired feet)",
+        "10. 1 Hour Mix Therapy Full Body Massage (Deep tissue full-body massage)",
+        "11. Gold Face Mask (Radiance-boosting gold mask)",
+        "12. Aromatherapy Oil Massage (Relaxing massage with natural aromatic oils)",
+        "13. VIP Relaxation Area (Extended private relaxation time)",
+        "14. Cold Beverage Service (Water and soda included)"
+      ],
+      ru: [
+        "1. Сауна (Глубокое расслабление в кедровой сауне)",
+        "2. Парная (Влажный пар для мышц)",
+        "3. Джакузи (Массажные водные струи)",
+        "4. Турецкий хамам (Ритуал на теплом мраморе)",
+        "5. Пилинг (Кесе) (Глубокое очищение всего тела)",
+        "6. Кофейно-солевой пилинг (Обновление кожи)",
+        "7. Пенный массаж (Роскошное пенное умывание)",
+        "8. Чай и фрукты (Горячий чай и свежие фрукты)",
+        "9. 10 Минут Массаж ног (Расслабление уставших ног)",
+        "10. 1 Час Микс-Терапевтический Массаж (Глубокий массаж тела)",
+        "11. Золотая Маска (Омолаживающая золотая маска)",
+        "12. Аромамассаж (Расслабляющий массаж натуральными маслами)",
+        "13. VIP Зона Отдыха (Расширенная приватная зона)",
+        "14. Холодные Напитки (Вода и содовая включены)"
+      ],
+      de: [
+        "1. Sauna (Tiefenentspannung in Zedernholzwärme)",
+        "2. Dampfbad (Sanfte feuchte Wärme)",
+        "3. Whirlpool (Warmwasser-Jets)",
+        "4. Türkisches Bad (Marmorstein-Ritual)",
+        "5. Peeling (Kese) (Ganzkörper-Hautreinigung)",
+        "6. Salz- & Kaffee-Peeling (Mineral-Peeling)",
+        "7. Schaummassage (Luxuriöses Schaumbad)",
+        "8. Tee & Obst (Heißer Tee und frisches Obst)",
+        "9. 10 Min Fußmassage (Wohltuende Fußpflege)",
+        "10. 1 Std. Mix-Therapie Ganzkörpermassage (Tiefengewebsmassage)",
+        "11. Gold-Gesichtsmaske (Strahlende Goldmaske)",
+        "12. Aromatherapie-Ölmassage (Entspannung mit natürlichen Ölen)",
+        "13. VIP-Ruhebereich (Erweiterte private Ruhezeit)",
+        "14. Kaltgetränke-Service (Wasser und Soda inklusive)"
+      ]
+    }
+  },
 
-  // --- SPA & BATH PRODUCTS ---
+  // --- SPA & CARE PRODUCTS ---
   {
     id: "prd-1",
     mainCategory: "spa_products",
-    subCategory: "soaps",
-    badge: "El Yapımı",
-    priceTRY: 220,
-    icon: "package",
-    image: "https://images.unsplash.com/photo-1607006482140-410d5402436f?auto=format&fit=crop&w=800&q=80",
+    subCategory: "oils",
+    badge: "Aromatherapy",
+    priceTRY: 500,
+    icon: "droplet",
+    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80",
     title: {
-      tr: "Geleneksel Saf Zeytinyağlı Defne Sabunu (300g)",
-      en: "Traditional Pure Olive Oil & Laurel Soap (300g)",
-      ru: "Натуральное Оливково-Лавровое Мыло (300г)",
-      de: "Traditionelle Olivenöl- & Lorbeerseife (300g)"
+      tr: "Aromatherapy Oil",
+      en: "Aromatherapy Oil",
+      ru: "Ароматерапевтическое Масло",
+      de: "Aromatherapie-Öl"
     },
     shortDesc: {
-      tr: "Kazanlarda kaynatılarak üretilmiş %100 doğal Antakya zeytinyağlı ve defneli banyo sabunu.",
-      en: "100% handmade natural olive oil & laurel bay soap brewed in traditional cauldrons.",
-      ru: "100% натуральное оливковое мыло с добавлением лаврового масла по старинному рецепту.",
-      de: "Handgesiedete reine Olivenölseife mit natürlichem Lorbeeröl."
+      tr: "Rahatlatıcı ve ferahlatıcı doğal aromaterapi yağı. Masaj ve cilt bakımı için idealdir.",
+      en: "Relaxing and refreshing natural aromatherapy oil. Ideal for massage and skincare.",
+      ru: "Расслабляющее натуральное масло для ароматерапии. Идеально для массажа.",
+      de: "Entspannendes natürliches Aromatherapie-Öl. Ideal für Massage und Hautpflege."
     },
     longDesc: {
-      tr: "Kimyasal katkı maddesi, paraben ve SLS içermez. Cildi kurutmadan derinlemesine temizler, saç ve vücut kullanımına uygundur.",
-      en: "Free of chemicals, parabens, and synthetic additives. Cleanses deeply while preserving skin moisture balance.",
-      ru: "Без химических добавок и парабенов. Бережно очищает кожу и волосы, не сушит.",
-      de: "Frei von Parabenen und Zusatzstoffen. Reinigt sanft und spendet natürliche Feuchtigkeit."
+      tr: "Doğal bitkisel özlerden elde edilen aromaterapi yağı, vücudu rahatlatır ve zihni dinlendirir. Masaj sırasında veya banyo sonrası kullanılabilir.",
+      en: "Derived from natural herbal extracts, this aromatherapy oil relaxes the body and calms the mind. Can be used during massage or after bathing.",
+      ru: "Масло из натуральных растительных экстрактов расслабляет тело и успокаивает разум.",
+      de: "Aus natürlichen Pflanzenextrakten gewonnenes Öl entspannt Körper und Geist."
     },
     included: {
-      tr: ["%100 Doğal Soğuk Sıkım Zeytinyağı", "Özel Keten Kesesinde Ambalaj", "300g Çift Kalıp"],
-      en: ["100% Organic Cold-pressed Olive Oil", "Packed in Linen Pouch", "300g Double Bar"],
-      ru: ["100% органическое оливковое масло", "В льняном мешочке", "300г"],
-      de: ["100% biologisches Olivenöl", "In Leinenbeutel verpackt", "300g Doppelstück"]
+      tr: ["Doğal Bitkisel Özler", "Rahatlatıcı Aroma", "Cilt Bakımına Uygun"],
+      en: ["Natural Herbal Extracts", "Relaxing Aroma", "Suitable for Skincare"],
+      ru: ["Натуральные экстракты", "Расслабляющий аромат", "Для ухода за кожей"],
+      de: ["Natürliche Extrakte", "Entspannender Duft", "Hautpflegegeeignet"]
     }
   },
   {
     id: "prd-2",
     mainCategory: "spa_products",
-    subCategory: "textile",
-    badge: "Orijinal İpek",
-    priceTRY: 350,
-    icon: "shirt",
-    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80",
+    subCategory: "creams",
+    badge: "Cooling",
+    priceTRY: 400,
+    icon: "snowflake",
+    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80",
     title: {
-      tr: "Hakiki %100 Saf İpek Hamam Kesesi",
-      en: "Authentic 100% Pure Silk Kese Glove",
-      ru: "Шелковая Рукавица Кесе 100%",
-      de: "Authentischer 100% Seiden-Kese Handschuh"
+      tr: "Crystal Mentol",
+      en: "Crystal Menthol",
+      ru: "Кристальный Ментол",
+      de: "Kristall-Menthol"
     },
     shortDesc: {
-      tr: "Dokuma tekniğiyle hazırlanmış, hassas ve etkili ölü deri arındırıcı hamam kesesi.",
-      en: "Woven pure silk glove for gentle yet superior exfoliation of dead skin cells.",
-      ru: "Шелковая варежка для идеального очищения кожи без раздражения.",
-      de: "Gewebter Seidenhandschuh für sanftes und effektives Peeling."
+      tr: "Saf kristal mentol. Serinletici ve ferahlatıcı etki sağlar, kas ağrılarını hafifletir.",
+      en: "Pure crystal menthol. Provides cooling and refreshing effect, relieves muscle pain.",
+      ru: "Чистый кристаллический ментол. Охлаждающий и освежающий эффект.",
+      de: "Reines Kristall-Menthol. Kühlende und erfrischende Wirkung."
     },
     longDesc: {
-      tr: "Hamam tellaklarının tercih ettiği orijinal Bursa dokuması saf ipek kese. Selülit oluşumunu engellemeye yardımcı olur ve batık sorunlarını giderir.",
-      en: "Authentic Bursa silk weave glove used by professional hamam tellaks. Helps reduce ingrown hairs and improves microcirculation.",
-      ru: "Настоящая шелковая рукавица из Бурсы. Улучшает кровообращение и делает кожу невероятно гладкой.",
-      de: "Original Seidenhandschuh aus Bursa. Hilft gegen Eingewachsenes Haar und stimuliert die Haut."
+      tr: "Doğal kristal mentol, masaj uygulamalarında ve cilt bakımında kullanılır. Kas gerginliğini azaltır ve ferahlık hissi verir.",
+      en: "Natural crystal menthol used in massage applications and skincare. Reduces muscle tension and provides a refreshing sensation.",
+      ru: "Натуральный кристаллический ментол для массажа и ухода за кожей. Снимает мышечное напряжение.",
+      de: "Natürliches Kristall-Menthol für Massage und Hautpflege. Reduziert Muskelverspannungen."
     },
     included: {
-      tr: ["%100 Ham İpek İplik", "Hassas ve Normal Ciltler İçin Uygun", "Bilek Büzgülü Ergonomik Yapı"],
-      en: ["100% Raw Silk Yarn", "Suitable for Sensitive & Normal Skin", "Elastic Wrist Band"],
-      ru: ["100% натуральный шелк", "Подходит для чувствительной кожи", "Удобная резинка на запястье"],
-      de: ["100% Rohseide", "Für empfindliche Haut geeignet", "Elastischer Bund"]
+      tr: ["Saf Kristal Mentol", "Serinletici Etki", "Kas Rahatlatıcı"],
+      en: ["Pure Crystal Menthol", "Cooling Effect", "Muscle Relief"],
+      ru: ["Чистый ментол", "Охлаждающий эффект", "Расслабление мышц"],
+      de: ["Reines Menthol", "Kühleffekt", "Muskelentspannung"]
     }
   },
   {
     id: "prd-3",
     mainCategory: "spa_products",
-    subCategory: "textile",
-    badge: "Pamuk Dokuma",
-    priceTRY: 450,
-    icon: "towel",
-    image: "https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&w=800&q=80",
+    subCategory: "creams",
+    badge: "Medical",
+    priceTRY: 600,
+    icon: "heart-pulse",
+    image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=800&q=80",
     title: {
-      tr: "Geleneksel Denizli Pamuk Peştemal",
-      en: "Traditional Denizli Cotton Pestemal Towel",
-      ru: "Традиционный Хлопковый Пештемаль",
-      de: "Traditionelles Denizli Baumwoll-Pestemal"
+      tr: "Medical Cream",
+      en: "Medical Cream",
+      ru: "Медицинский Крем",
+      de: "Medizinische Creme"
     },
     shortDesc: {
-      tr: "Hızlı kuruyan, yüksek su emiciliğine sahip, saçaklı lüks hamam peştemali.",
-      en: "Ultra-absorbent, fast-drying luxury cotton Turkish bath towel with handmade tassels.",
-      ru: "Легкое хлопковое полотенце-пештемаль с высокой впитываемостью.",
-      de: "Saugfähiges, schnell trocknendes türkisches Hamamtuch aus reiner Baumwolle."
+      tr: "Profesyonel medikal masaj kremi. Derin doku masajı ve kas terapisi için özel formül.",
+      en: "Professional medical massage cream. Special formula for deep tissue massage and muscle therapy.",
+      ru: "Профессиональный медицинский массажный крем для глубокого массажа тканей.",
+      de: "Professionelle medizinische Massagecreme für Tiefengewebsmassage."
     },
     longDesc: {
-      tr: "%100 Denizli pamuğundan elde dokuma tezgahlarında üretilmiştir. Plajda, hamamda ve günlük banyoda rahatlıkla kullanılabilir.",
-      en: "Hand-woven from 100% premium Aegean cotton. Perfect for hamams, beaches, saunas, or home spas.",
-      ru: "Соткан из 100% эгейского хлопка. Идеально для хамама, пляжа и сауны.",
-      de: "Handgewebt aus 100% Ägäis-Baumwolle. Ideal für Hamam, Strand und Sauna."
+      tr: "Medikal formüllü masaj kremi, profesyonel terapistler tarafından derin doku masajı ve kas terapisinde kullanılır. Kas ağrılarını hafifletir ve iyileşme sürecini destekler.",
+      en: "Medical formula massage cream used by professional therapists for deep tissue massage and muscle therapy. Relieves muscle pain and supports recovery.",
+      ru: "Массажный крем медицинской формулы для профессионального использования в глубоком массаже тканей.",
+      de: "Medizinische Massagecreme für professionelle Tiefengewebsmassage und Muskeltherapie."
     },
     included: {
-      tr: ["100x180 cm Standart Boyut", "%100 Pamuklu İplik", "Yıkandıkça Yumuşayan Dokularda"],
-      en: ["100x180 cm Standard Size", "100% Aegean Cotton", "Gets Softer With Every Wash"],
-      ru: ["100х180 см", "100% хлопок", "Становится мягче с каждой стиркой"],
-      de: ["100x180 cm", "100% Baumwolle", "Wird mit jeder Wäsche weicher"]
+      tr: ["Medikal Formül", "Derin Doku Masajı İçin", "Profesyonel Kullanım"],
+      en: ["Medical Formula", "For Deep Tissue Massage", "Professional Use"],
+      ru: ["Медицинская формула", "Для глубокого массажа", "Профессиональное использование"],
+      de: ["Medizinische Formel", "Für Tiefenmassage", "Professioneller Einsatz"]
     }
   },
   {
     id: "prd-4",
+    mainCategory: "spa_products",
+    subCategory: "serums",
+    badge: "Serum",
+    priceTRY: 550,
+    icon: "flask-round",
+    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80",
+    title: {
+      tr: "Aromatherapy Serum",
+      en: "Aromatherapy Serum",
+      ru: "Ароматерапевтическая Сыворотка",
+      de: "Aromatherapie-Serum"
+    },
+    shortDesc: {
+      tr: "Aromaterapi özlü konsantre cilt bakım serumu. Cildi besler ve yeniler.",
+      en: "Concentrated aromatherapy skin care serum. Nourishes and revitalizes the skin.",
+      ru: "Концентрированная сыворотка для ароматерапии. Питает и обновляет кожу.",
+      de: "Konzentriertes Aromatherapie-Hautpflegeserum. Nährt und revitalisiert die Haut."
+    },
+    longDesc: {
+      tr: "Doğal aromaterapi özleri ile zenginleştirilmiş konsantre serum. Cilde derinlemesine nüfuz ederek besler, nemlendirir ve yeniler.",
+      en: "Concentrated serum enriched with natural aromatherapy extracts. Deeply penetrates the skin to nourish, hydrate and revitalize.",
+      ru: "Концентрированная сыворотка с натуральными экстрактами ароматерапии. Глубоко проникает в кожу.",
+      de: "Konzentriertes Serum mit natürlichen Aromatherapie-Extrakten. Dringt tief in die Haut ein."
+    },
+    included: {
+      tr: ["Aromaterapi Özleri", "Konsantre Formül", "Derin Besleyici"],
+      en: ["Aromatherapy Extracts", "Concentrated Formula", "Deep Nourishing"],
+      ru: ["Экстракты ароматерапии", "Концентрированная формула", "Глубокое питание"],
+      de: ["Aromatherapie-Extrakte", "Konzentrierte Formel", "Tiefenpflege"]
+    }
+  },
+  {
+    id: "prd-5",
+    mainCategory: "spa_products",
+    subCategory: "serums",
+    badge: "Anti-Age",
+    priceTRY: 700,
+    icon: "sparkles",
+    image: "https://images.unsplash.com/photo-1570194065650-d99fb4a38691?auto=format&fit=crop&w=800&q=80",
+    title: {
+      tr: "Kolajen Serum",
+      en: "Collagen Serum",
+      ru: "Коллагеновая Сыворотка",
+      de: "Kollagen-Serum"
+    },
+    shortDesc: {
+      tr: "Kolajen destekli yaşlanma karşıtı serum. Cildi sıkılaştırır ve elastikiyet kazandırır.",
+      en: "Collagen-boosted anti-aging serum. Firms the skin and improves elasticity.",
+      ru: "Антивозрастная сыворотка с коллагеном. Подтягивает кожу и повышает эластичность.",
+      de: "Kollagen-Anti-Aging-Serum. Strafft die Haut und verbessert die Elastizität."
+    },
+    longDesc: {
+      tr: "Yüksek konsantrasyonlu kolajen serum, cildin doğal kolajen üretimini destekler. Kırışıklıkları azaltır, cildi sıkılaştırır ve genç bir görünüm kazandırır.",
+      en: "High-concentration collagen serum supports the skin's natural collagen production. Reduces wrinkles, firms the skin and gives a youthful appearance.",
+      ru: "Высококонцентрированная коллагеновая сыворотка поддерживает выработку коллагена. Уменьшает морщины.",
+      de: "Hochkonzentriertes Kollagen-Serum unterstützt die natürliche Kollagenproduktion der Haut."
+    },
+    included: {
+      tr: ["Yüksek Kolajen Konsantrasyonu", "Yaşlanma Karşıtı", "Sıkılaştırıcı Etki"],
+      en: ["High Collagen Concentration", "Anti-Aging", "Firming Effect"],
+      ru: ["Высокая концентрация коллагена", "Антивозрастной", "Подтягивающий эффект"],
+      de: ["Hohe Kollagenkonzentration", "Anti-Aging", "Straffender Effekt"]
+    }
+  },
+  {
+    id: "prd-6",
+    mainCategory: "spa_products",
+    subCategory: "serums",
+    badge: "Doğal",
+    priceTRY: 650,
+    icon: "bug",
+    image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80",
+    title: {
+      tr: "Snail Serum",
+      en: "Snail Serum",
+      ru: "Сыворотка с Улиткой",
+      de: "Schnecken-Serum"
+    },
+    shortDesc: {
+      tr: "Salyangoz özlü onarıcı serum. Cilt yenilenme sürecini hızlandırır ve leke giderici etki sağlar.",
+      en: "Snail extract repair serum. Accelerates skin renewal and provides spot-correcting effect.",
+      ru: "Восстанавливающая сыворотка с экстрактом улитки. Ускоряет обновление кожи.",
+      de: "Schneckenextrakt-Reparaturserum. Beschleunigt die Hauterneuerung."
+    },
+    longDesc: {
+      tr: "Salyangoz müsilajı özünden elde edilen bu serum, cildin doğal onarım sürecini destekler. Leke ve izleri azaltır, cildi yumuşatır ve nemlendirir.",
+      en: "Derived from snail mucin extract, this serum supports the skin's natural repair process. Reduces spots and marks, softens and moisturizes the skin.",
+      ru: "Сыворотка на основе муцина улитки поддерживает процесс восстановления кожи.",
+      de: "Aus Schneckenmuzin gewonnenes Serum unterstützt den natürlichen Reparaturprozess der Haut."
+    },
+    included: {
+      tr: ["Salyangoz Müsilajı Özü", "Onarıcı Formül", "Leke Giderici"],
+      en: ["Snail Mucin Extract", "Repair Formula", "Spot Corrector"],
+      ru: ["Экстракт улитки", "Восстанавливающая формула", "Коррекция пятен"],
+      de: ["Schneckenmuzin-Extrakt", "Reparaturformel", "Fleckenkorrektur"]
+    }
+  },
+  {
+    id: "prd-7",
+    mainCategory: "spa_products",
+    subCategory: "serums",
+    badge: "Nemlendirici",
+    priceTRY: 650,
+    icon: "droplets",
+    image: "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?auto=format&fit=crop&w=800&q=80",
+    title: {
+      tr: "Hyaluronic Serum",
+      en: "Hyaluronic Serum",
+      ru: "Гиалуроновая Сыворотка",
+      de: "Hyaluron-Serum"
+    },
+    shortDesc: {
+      tr: "Hyalüronik asit bazlı yoğun nemlendirici serum. Cildi derinlemesine nemlendirir ve dolgunlaştırır.",
+      en: "Hyaluronic acid based intensive moisturizing serum. Deeply hydrates and plumps the skin.",
+      ru: "Интенсивная увлажняющая сыворотка на основе гиалуроновой кислоты.",
+      de: "Hyaluronsäure-basiertes intensives Feuchtigkeitsserum."
+    },
+    longDesc: {
+      tr: "Düşük ve yüksek molekül ağırlıklı hyalüronik asit kombinasyonu ile cildi her katmanda nemlendirir. Kuru ve susuz cildi canlandırır, ince çizgileri azaltır.",
+      en: "Hydrates the skin at every layer with a combination of low and high molecular weight hyaluronic acid. Revitalizes dry skin and reduces fine lines.",
+      ru: "Увлажняет кожу на каждом уровне комбинацией гиалуроновой кислоты разного молекулярного веса.",
+      de: "Versorgt die Haut auf jeder Ebene mit Feuchtigkeit durch eine Kombination von Hyaluronsäuren."
+    },
+    included: {
+      tr: ["Hyalüronik Asit", "Yoğun Nemlendirici", "İnce Çizgi Azaltıcı"],
+      en: ["Hyaluronic Acid", "Intensive Moisturizer", "Fine Line Reducer"],
+      ru: ["Гиалуроновая кислота", "Интенсивное увлажнение", "Уменьшение морщин"],
+      de: ["Hyaluronsäure", "Intensive Feuchtigkeitspflege", "Faltenreduktion"]
+    }
+  },
+  {
+    id: "prd-8",
+    mainCategory: "spa_products",
+    subCategory: "creams",
+    badge: "Massage",
+    priceTRY: 550,
+    icon: "hand",
+    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80",
+    title: {
+      tr: "Smart Massage Cream",
+      en: "Smart Massage Cream",
+      ru: "Умный Массажный Крем",
+      de: "Smart Massage-Creme"
+    },
+    shortDesc: {
+      tr: "Akıllı formüllü masaj kremi. Kas gevşetici ve cilt besleyici özellikli profesyonel krem.",
+      en: "Smart formula massage cream. Professional cream with muscle relaxing and skin nourishing properties.",
+      ru: "Массажный крем с умной формулой. Расслабляет мышцы и питает кожу.",
+      de: "Massagecreme mit intelligenter Formel. Muskelentspannend und hautnährend."
+    },
+    longDesc: {
+      tr: "Özel formülü sayesinde masaj sırasında ciltte ideal kayganllk sağlarken aynı zamanda cildi besler. Kas gerginliğini azaltır ve rahatlatıcı etki yapar.",
+      en: "Thanks to its special formula, it provides ideal glide on the skin during massage while nourishing the skin. Reduces muscle tension and provides a relaxing effect.",
+      ru: "Обеспечивает идеальное скольжение при массаже, одновременно питая кожу.",
+      de: "Bietet ideales Gleiten bei der Massage und nährt gleichzeitig die Haut."
+    },
+    included: {
+      tr: ["Akıllı Formül", "Kas Gevşetici", "Cilt Besleyici"],
+      en: ["Smart Formula", "Muscle Relaxant", "Skin Nourishing"],
+      ru: ["Умная формула", "Расслабление мышц", "Питание кожи"],
+      de: ["Intelligente Formel", "Muskelentspannung", "Hauternährung"]
+    }
+  },
+  {
+    id: "prd-9",
+    mainCategory: "spa_products",
+    subCategory: "sets",
+    badge: "Set",
+    priceTRY: 1200,
+    icon: "package",
+    image: "https://images.unsplash.com/photo-1556228841-a3c527ebefe5?auto=format&fit=crop&w=800&q=80",
+    title: {
+      tr: "Face Routine Set",
+      en: "Face Routine Set",
+      ru: "Набор для Ухода за Лицом",
+      de: "Gesichtspflege-Set"
+    },
+    shortDesc: {
+      tr: "Komple yüz bakım seti. Temizleyici, tonik, serum ve nemlendirici içerir.",
+      en: "Complete face care set. Includes cleanser, toner, serum and moisturizer.",
+      ru: "Полный набор для ухода за лицом. Очищающее средство, тоник, сыворотка и увлажняющий крем.",
+      de: "Komplettes Gesichtspflege-Set mit Reiniger, Toner, Serum und Feuchtigkeitscreme."
+    },
+    longDesc: {
+      tr: "Günlük yüz bakım rutininiz için ihtiyacınız olan tüm ürünleri içeren kapsamlı set. Cildinizi temizler, tonlar, besler ve nemlendirir.",
+      en: "Comprehensive set containing all the products you need for your daily face care routine. Cleanses, tones, nourishes and moisturizes your skin.",
+      ru: "Комплексный набор со всеми продуктами для ежедневного ухода за лицом.",
+      de: "Umfassendes Set mit allen Produkten für Ihre tägliche Gesichtspflegeroutine."
+    },
+    included: {
+      tr: ["Yüz Temizleyici", "Tonik", "Bakım Serumu", "Nemlendirici Krem"],
+      en: ["Face Cleanser", "Toner", "Care Serum", "Moisturizer"],
+      ru: ["Очищающее средство", "Тоник", "Сыворотка", "Увлажняющий крем"],
+      de: ["Gesichtsreiniger", "Toner", "Pflegeserum", "Feuchtigkeitscreme"]
+    }
+  },
+  {
+    id: "prd-10",
+    mainCategory: "spa_products",
+    subCategory: "serums",
+    badge: "Vitamin C",
+    priceTRY: 600,
+    icon: "citrus",
+    image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=800&q=80",
+    title: {
+      tr: "Pomegranate Serum",
+      en: "Pomegranate Serum",
+      ru: "Гранатовая Сыворотка",
+      de: "Granatapfel-Serum"
+    },
+    shortDesc: {
+      tr: "Nar özlü antioksidan serum. Cildi aydınlatır, korur ve gençleştirir.",
+      en: "Pomegranate extract antioxidant serum. Brightens, protects and rejuvenates the skin.",
+      ru: "Антиоксидантная сыворотка с экстрактом граната. Осветляет и омолаживает кожу.",
+      de: "Granatapfel-Antioxidans-Serum. Hellt die Haut auf und verjüngt sie."
+    },
+    longDesc: {
+      tr: "Nar özünün zengin antioksidan içeriği ile cildi serbest radikallere karşı korur. Cilt tonunu eşitler, parlaklık kazandırır ve yaşlanma belirtilerini azaltır.",
+      en: "Protects the skin against free radicals with the rich antioxidant content of pomegranate extract. Evens skin tone, adds radiance and reduces signs of aging.",
+      ru: "Защищает кожу от свободных радикалов благодаря антиоксидантам экстракта граната.",
+      de: "Schützt die Haut mit den Antioxidantien des Granatapfels vor freien Radikalen."
+    },
+    included: {
+      tr: ["Nar Özü", "Antioksidan Koruma", "Aydınlatıcı Etki"],
+      en: ["Pomegranate Extract", "Antioxidant Protection", "Brightening Effect"],
+      ru: ["Экстракт граната", "Антиоксидантная защита", "Осветляющий эффект"],
+      de: ["Granatapfel-Extrakt", "Antioxidativer Schutz", "Aufhellender Effekt"]
+    }
+  },
+  {
+    id: "prd-11",
     mainCategory: "spa_products",
     subCategory: "oils",
     badge: "Organik",
@@ -465,461 +790,61 @@ const CATALOG_ITEMS = [
     icon: "droplet",
     image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80",
     title: {
-      tr: "Argan & Yasemin Masaj & Bakım Yağı (250ml)",
-      en: "Argan & Jasmine Body & Massage Oil (250ml)",
-      ru: "Масло для тела Арган и Жасмин (250мл)",
-      de: "Argan- & Jasmin-Körperöl (250ml)"
+      tr: "Argan Serum",
+      en: "Argan Serum",
+      ru: "Аргановая Сыворотка",
+      de: "Argan-Serum"
     },
     shortDesc: {
-      tr: "Fas argan yağı, tatlı badem ve büyüleyici yasemin aromalı lüks vücut yağı.",
-      en: "Moroccan argan oil blended with sweet almond and intoxicating jasmine aroma.",
-      ru: "Марокканское аргановое масло с ароматом жасмина и миндаля.",
-      de: "Marokkanisches Arganöl mit süßem Mandel- und Jasminduft."
+      tr: "Saf argan yağı bazlı besleyici serum. Saç ve cilt bakımında mükemmel sonuçlar sağlar.",
+      en: "Pure argan oil based nourishing serum. Provides excellent results in hair and skin care.",
+      ru: "Питательная сыворотка на основе арганового масла. Для волос и кожи.",
+      de: "Nährendes Serum auf Arganölbasis. Hervorragende Ergebnisse für Haar und Haut."
     },
     longDesc: {
-      tr: "Banyo ve hamam sonrası nemini kaybetmiş cildi besler. Yağlı his bırakmadan hızla emilir ve vücudunuzda hoş bir koku bırakır.",
-      en: "Restores moisture after baths. Absorbs quickly without greasy residue, leaving a delicate scent.",
-      ru: "Питает сухую кожу после банных процедур. Быстро впитывается без липкости.",
-      de: "Spendet der Haut nach dem Bad intensive Feuchtigkeit ohne zu fetten."
+      tr: "Fas'tan özel olarak temin edilen saf argan yağından üretilen bu serum, cildi ve saçı derinlemesine besler. E vitamini açısından zengindir ve kuruluğu giderir.",
+      en: "Made from pure argan oil specially sourced from Morocco, this serum deeply nourishes skin and hair. Rich in Vitamin E and eliminates dryness.",
+      ru: "Сыворотка из чистого арганового масла из Марокко глубоко питает кожу и волосы.",
+      de: "Aus reinem marokkanischem Arganöl hergestelltes Serum nährt Haut und Haare tiefenwirksam."
     },
     included: {
-      tr: ["Soğuk Sıkım Argan Yağı", "Doğal Yasemin Özleri", "250ml Cam Şişe"],
-      en: ["Cold-pressed Argan Oil", "Natural Jasmine Extract", "250ml Glass Bottle"],
-      ru: ["Аргановое масло", "Экстракт жасмина", "250мл"],
-      de: ["Kaltgepresstes Arganöl", "Jasmin-Extrakt", "250ml Glasflasche"]
+      tr: ["Saf Argan Yağı", "E Vitamini Zengin", "Saç ve Cilt İçin"],
+      en: ["Pure Argan Oil", "Rich in Vitamin E", "For Hair and Skin"],
+      ru: ["Чистое аргановое масло", "Богато витамином Е", "Для волос и кожи"],
+      de: ["Reines Arganöl", "Reich an Vitamin E", "Für Haar und Haut"]
     }
   },
   {
-    id: "prd-5",
+    id: "prd-12",
     mainCategory: "spa_products",
-    subCategory: "sets",
-    badge: "Hediyelik",
-    priceTRY: 1100,
-    icon: "gift",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+    subCategory: "peeling",
+    badge: "Peeling",
+    priceTRY: 450,
+    icon: "sparkles",
+    image: "https://images.unsplash.com/photo-1570194065650-d99fb4a38691?auto=format&fit=crop&w=800&q=80",
     title: {
-      tr: "History Hamam Ahşap Hediyelik Banyo Seti",
-      en: "History Hamam Luxury Wooden Bath Gift Set",
-      ru: "Подарочный Банный Набор в Деревянной Шкатулке",
-      de: "History Hamam Luxus-Badeset in Holzkiste"
+      tr: "Aromatic Salt Peeling",
+      en: "Aromatic Salt Peeling",
+      ru: "Ароматический Солевой Пилинг",
+      de: "Aromatisches Salzpeeling"
     },
     shortDesc: {
-      tr: "Özel ahşap kutuda: Peştemal, İpek Kese, Zeytinyağlı Sabun, Masaj Yağı ve Ponza Taşı.",
-      en: "Luxury wooden crate containing: Pestemal, Silk Kese, Olive Soap, Oil & Pumice Stone.",
-      ru: "Подарочный набор: пештемаль, шелковая кесе, оливковое мыло, масло и пемза.",
-      de: "Geschenkbox mit: Pestemal, Seidenkese, Olivenseife, Körperöl und Bimsstein."
+      tr: "Aromatik tuz peeling. Ölü deri hücrelerini arındırır ve cildi pürüzsüzleştirir.",
+      en: "Aromatic salt peeling. Removes dead skin cells and smoothens the skin.",
+      ru: "Ароматический солевой пилинг. Удаляет мертвые клетки кожи и разглаживает.",
+      de: "Aromatisches Salzpeeling. Entfernt abgestorbene Hautzellen und glättet die Haut."
     },
     longDesc: {
-      tr: "Sevdiklerinize unutulmaz bir Osmanlı banyo hediyesi verin. Tamamen doğal el yapımı ürünlerden oluşan lüks koleksiyon.",
-      en: "The ultimate authentic souvenir gift. Packed with premium handcrafted bath products.",
-      ru: "Идеальный памятный подарок из Турции с натуральной банной косметикой.",
-      de: "Das perfekte Geschenk-Souvenir mit hochwertigen handgefertigten Badeprodukten."
+      tr: "Doğal deniz tuzu ve aromatik yağların birleşiminden oluşan bu peeling, ciltteki ölü hücreleri nazikçe temizler. Kan dolaşımını hızlandırır ve cilde canlılık kazandırır.",
+      en: "This peeling, made from a combination of natural sea salt and aromatic oils, gently cleanses dead cells from the skin. Boosts circulation and adds vitality to the skin.",
+      ru: "Пилинг из натуральной морской соли и ароматических масел мягко очищает кожу от мертвых клеток.",
+      de: "Dieses Peeling aus Meersalz und aromatischen Ölen reinigt sanft abgestorbene Hautzellen."
     },
     included: {
-      tr: ["Ahşap Oyma Kutu", "%100 Pamuk Peştemal", "İpek Kese", "Zeytinyağlı Sabun", "50ml Masaj Yağı", "Doğal Volkanik Ponza Taşı"],
-      en: ["Crafted Wooden Box", "100% Cotton Pestemal", "Pure Silk Kese", "Olive Soap Bar", "50ml Massage Oil", "Volcanic Pumice Stone"],
-      ru: ["Деревянная коробка", "Пештемаль", "Шелковая кесе", "Оливковое мыло", "Масло 50мл", "Пемза"],
-      de: ["Holzbox", "Baumwoll-Pestemal", "Seidenkese", "Olivenseife", "50ml Öllotion", "Bimsstein"]
-    }
-  },
-
-  // --- BEVERAGES & DRINKS ---
-  {
-    id: "bev-1",
-    mainCategory: "beverages",
-    subCategory: "fresh_juices",
-    badge: "Taze Sıkma",
-    priceTRY: 180,
-    icon: "citrus",
-    image: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Taze Sıkılmış Portakal & Nar Suyu Mix (350ml)",
-      en: "Freshly Squeezed Orange & Pomegranate Juice",
-      ru: "Свежевыжатый Сок Апельсин и Гранат",
-      de: "Frisch gepresster Orangensaft & Granatapfelsaft"
-    },
-    shortDesc: {
-      tr: "Alanya narlarından ve Akdeniz portakallarından anında taze sıkılmış C vitamini deposu.",
-      en: "Pure Mediterranean oranges and local Alanya pomegranates freshly squeezed upon order.",
-      ru: "Свежевыжатый сок из средиземноморских апельсинов и аланийских гранатов.",
-      de: "Frisch gepresster Saft aus mediterranen Orangen und Alanya-Granatäpfeln."
-    },
-    longDesc: {
-      tr: "Hamamda terledikten sonra vücudun elektrolit ve vitamin dengesini tazelemek için en mükemmel içecek.",
-      en: "The best vitamin C boost after detoxing in the hamam sauna.",
-      ru: "Идеальный витаминный напиток после посещения сауны и хамама.",
-      de: "Die perfekte Erfrischung nach dem Saunagang."
-    },
-    included: {
-      tr: ["%100 Katkısız Taze Meyve", "Buzlu veya Oda Sıcaklığında Servis"],
-      en: ["100% Natural Fresh Fruit", "Served Chilled or Room Temp"],
-      ru: ["100% свежие фрукты", "Подается со льдом"],
-      de: ["100% frische Früchte", "Gekühlt serviert"]
-    }
-  },
-  {
-    id: "bev-2",
-    mainCategory: "beverages",
-    subCategory: "hot_drinks",
-    badge: "Geleneksel",
-    priceTRY: 120,
-    icon: "coffee",
-    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Köpüklü Geleneksel Türk Kahvesi & Lokum",
-      en: "Traditional Turkish Coffee with Turkish Delight",
-      ru: "Турецкий Кофе с Рахат-Лукумом",
-      de: "Türkischer Kaffee mit Lokum"
-    },
-    shortDesc: {
-      tr: "Közde pişirilmiş bol köpüklü Kurukahveci Mehmet Efendi kahvesi ve çifte kavrulmuş fıstıklı lokum.",
-      en: "Authentic slow-cooked Turkish coffee served with premium pistachio Turkish delight.",
-      ru: "Ароматный турецкий кофе с густой пеной и фисташковым лукумом.",
-      de: "Traditioneller türkischer Kaffee mit feinem Schaum und Pistazien-Lokum."
-    },
-    longDesc: {
-      tr: "Özel bakır cezvede pişirilen, yanında soğuk su ve fıstıklı lokum ikramıyla sunulan klasiklerimizden.",
-      en: "Brewed in traditional copper pot, accompanied by cold spring water and double-roasted delight.",
-      ru: "Варится в медной турке, подается с холодной водой и лукумом.",
-      de: "In der Kupferkanne zubereitet, serviert mit frischem Wasser und Lokum."
-    },
-    included: {
-      tr: ["Bakır Fincanda Özel Sunum", "Antep Fıstıklı Çifte Kavrulmuş Lokum", "Soğuk Cam Şişe Su"],
-      en: ["Served in Copper Cup", "Pistachio Turkish Delight", "Cold Spring Water"],
-      ru: ["Подача в медной чашке", "Фисташковый рахат-лукум", "Прохладная вода"],
-      de: ["Serviert in Kupfertasse", "Pistazien-Lokum", "Kaltes Wasser"]
-    }
-  },
-  {
-    id: "bev-3",
-    mainCategory: "beverages",
-    subCategory: "cold_drinks",
-    badge: "Osmanlı Saray",
-    priceTRY: 140,
-    icon: "wine",
-    image: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Buzlu Osmanlı Şerbeti (Gül & Demirhindi)",
-      en: "Iced Ottoman Sherbet (Rose & Tamarind)",
-      ru: "Османский Шербет со Льдом (Роза и Тамаринд)",
-      de: "Eiskalter Osmanischer Scherbet (Rose & Tamarinde)"
-    },
-    shortDesc: {
-      tr: "40 çeşit baharat, gül yaprakları, karanfil ve demirhindi ile hazırlanan tarihi serinletici şerbet.",
-      en: "Refreshing traditional herbal sherbet infused with rose petals, tamarind, cinnamon, and cloves.",
-      ru: "Традиционный освежающий напиток из лепестков роз, тамаринда, гвоздики и корицы.",
-      de: "Erfrischender traditioneller Scherbet aus Rosenblüten, Tamarinde und Gewürzen."
-    },
-    longDesc: {
-      tr: "Saray hekimlerinin serinletici ve hazmı kolaylaştırıcı tarifi. Hamam sonrasında ferahlığın simgesidir.",
-      en: "Authentic Ottoman palace recipe crafted to quench thirst and refresh after steam baths.",
-      ru: "Старинный рецепт султанского двора для утоления жажды в хамаме.",
-      de: "Königliches Rezept zur Erfrischung nach dem Dampfbad."
-    },
-    included: {
-      tr: ["Doğal Baharat & Gül Özü", "Buzlu Sürahi Sunumu"],
-      en: ["Natural Spices & Rose Essence", "Served Chilled"],
-      ru: ["Натуральные специи и роза", "Со льдом"],
-      de: ["Natürliche Gewürze & Rose", "Eiskalt serviert"]
-    }
-  },
-  {
-    id: "bev-4",
-    mainCategory: "beverages",
-    subCategory: "cold_drinks",
-    badge: "Ferahlatıcı",
-    priceTRY: 80,
-    icon: "glass-water",
-    image: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Kızılay Limonlu & Sade Doğal Maden Suyu",
-      en: "Sparkling Mineral Water (Natural / Lemon)",
-      ru: "Минеральная Газированная Вода (Лимон / Классика)",
-      de: "Natürliches Mineralwasser (Natur / Zitrone)"
-    },
-    shortDesc: {
-      tr: "Doğal zengin mineralli soda, buz ve taze limon dilimi ile.",
-      en: "Rich natural sparkling mineral water served with ice and fresh lemon slice.",
-      ru: "Газированная минеральная вода со льдом и долькой лимона.",
-      de: "Mineralstoffreiches Sprudelwasser mit Eis und Zitrone."
-    },
-    longDesc: {
-      tr: "Vücuttan atılan mineralleri geri kazandıran serinletici sodalarımız.",
-      en: "Replenishes minerals lost during sweating in the hamam.",
-      ru: "Восполняет минералы после сауны.",
-      de: "Füllt den Mineralstoffgehalt nach dem Saunagang auf."
-    },
-    included: {
-      tr: ["Buzlu Cam Bardak", "Taze Limon Dilimleri"],
-      en: ["Iced Glass", "Fresh Lemon Slices"],
-      ru: ["Стакан со льдом", "Свежий лимон"],
-      de: ["Eisglas", "Frische Zitronenscheiben"]
-    }
-  },
-  {
-    id: "bev-5",
-    mainCategory: "beverages",
-    subCategory: "cold_drinks",
-    badge: "Kutu Meşrubat",
-    priceTRY: 100,
-    icon: "cup-soda",
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Soğuk Meşrubat Çeşitleri (Cola, Fanta, Sprite, Fuse Tea)",
-      en: "Assorted Cold Soft Drinks (Coca-Cola, Fanta, Sprite, Ice Tea)",
-      ru: "Холодные Газированные Напитки (Кола, Фанта, Спрайт, Чай)",
-      de: "Kühle Erfrischungsgetränke (Cola, Fanta, Sprite, Eistee)"
-    },
-    shortDesc: {
-      tr: "Buz gibi 330ml kutu Coca-Cola Zero, Fanta, Sprite, Lipton Şeftali/Limon Buzlu Çay.",
-      en: "Ice-cold 330ml canned sodas and iced teas.",
-      ru: "Освежающие напитки в банках 330мл.",
-      de: "Eiskalte 330ml Dosengetränke."
-    },
-    longDesc: {
-      tr: "İstediğiniz markada soğuk içecek tercihinizi garsonlarımıza bildirebilirsiniz.",
-      en: "Choose your favorite chilled soft drink.",
-      ru: "Выберите ваш любимый напиток.",
-      de: "Wählen Sie Ihr Lieblingsgetränk."
-    },
-    included: {
-      tr: ["330ml Soğuk Kutu", "Buzlu Bardak Sunumu"],
-      en: ["330ml Chilled Can", "Served with Ice Glass"],
-      ru: ["Банка 330мл", "Со льдом"],
-      de: ["330ml Dose", "Mit Eisglas"]
-    }
-  },
-  {
-    id: "bev-6",
-    mainCategory: "beverages",
-    subCategory: "cold_drinks",
-    badge: "Enerji",
-    priceTRY: 150,
-    icon: "zap",
-    image: "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Red Bull Enerji İçeceği (250ml)",
-      en: "Red Bull Energy Drink (250ml)",
-      ru: "Энергетический Напиток Red Bull (250мл)",
-      de: "Red Bull Energy Drink (250ml)"
-    },
-    shortDesc: {
-      tr: "Canlandırıcı buz gibi Red Bull Energy Drink.",
-      en: "Ice-cold revitalizing Red Bull Energy Drink.",
-      ru: "Освежающий энергией Red Bull.",
-      de: "Eiskalter Red Bull Energy Drink."
-    },
-    longDesc: {
-      tr: "Güne enerji katmak ve zindelik kazanmak için harika seçim.",
-      en: "Boost your vitality after spa relaxation.",
-      ru: "Заряд энергии и бодрости.",
-      de: "Vitalitäts-Kick nach der Entspannung."
-    },
-    included: {
-      tr: ["250ml Kutu", "Limon Dilimli Buzlu Bardak"],
-      en: ["250ml Can", "Ice & Lemon Glass"],
-      ru: ["Банка 250мл", "Со льдом"],
-      de: ["250ml Dose", "Eisglas mit Zitrone"]
-    }
-  },
-  {
-    id: "bev-7",
-    mainCategory: "beverages",
-    subCategory: "hot_drinks",
-    badge: "Bitki Çayı",
-    priceTRY: 90,
-    icon: "leaf",
-    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Bitki & Meyve Çayları (Adaçayı, Ihlamur, Yeşil Çay, Papatya)",
-      en: "Herbal & Fruit Teas (Sage, Linden, Green Tea, Chamomile)",
-      ru: "Травяные Чаи (Шалфей, Липа, Зеленый, Ромашка)",
-      de: "Kräuter- & Früchtetees (Salbei, Lindenblüte, Grüntee, Kamille)"
-    },
-    shortDesc: {
-      tr: "Doğal süzme bal ve limon dilimi eşliğinde porselen demlikte bitki çayları.",
-      en: "Brewed loose-leaf herbal teas served with organic honey and lemon.",
-      ru: "Натуральный травяной чай с медом и лимоном.",
-      de: "Frisch aufgebrühter Kräutertee mit Honig und Zitrone."
-    },
-    longDesc: {
-      tr: "Hamam sonrası toksin atmaya yardımcı organik bitki çaylarımız.",
-      en: "Helps detoxify the body following hamam steam sessions.",
-      ru: "Помогает выводить токсины после хамама.",
-      de: "Unterstützt die Entgiftung nach dem Dampfbad."
-    },
-    included: {
-      tr: ["Porselen Demlik Sunumu", "Süzme Doğal Bal", "Taze Limon"],
-      en: ["Porcelain Teapot", "Organic Honey", "Fresh Lemon"],
-      ru: ["Фарфоровый чайник", "Натуральный мед", "Лимон"],
-      de: ["Porzellankanne", "Echter Honig", "Frische Zitrone"]
-    }
-  },
-
-  // --- FOOD & SNACKS ---
-  {
-    id: "fd-1",
-    mainCategory: "food",
-    subCategory: "desserts",
-    badge: "Geleneksel Tatlı",
-    priceTRY: 280,
-    icon: "utensils",
-    image: "https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Geleneksel Antep Fıstıklı Baklava (4 Adet)",
-      en: "Authentic Antep Pistachio Baklava (4 Pcs)",
-      ru: "Фисташковая Бактрава из Антепа (4 шт)",
-      de: "Echte Antep Pistazien-Baklava (4 Stk)"
-    },
-    shortDesc: {
-      tr: "Taze terayağlı, bol Antep fıstıklı çıtır çıtır saray baklavası.",
-      en: "Crispy layers of buttered filo pastry stuffed with premium Gaziantep pistachios.",
-      ru: "Хрустящая баклава с обильной фисташковой начинкой и сливочным маслом.",
-      de: "Knuspriges Blätterteiggebäck reichlich mit Antep-Pistazien gefüllt."
-    },
-    longDesc: {
-      tr: "Gaziantep'ten günlük getirilen, saf sade yağ ile hazırlanmış hakiki fıstıklı baklava.",
-      en: "Delivered fresh from Gaziantep master bakers daily.",
-      ru: "Свежая баклава прямо от гастрономических мастеров.",
-      de: "Täglich frisch gelieferte meisterhafte Baklava."
-    },
-    included: {
-      tr: ["4 Adet Fıstıklı Baklava", "Pudra Şekeri & Antep Fıstığı Süslemesi"],
-      en: ["4 Pieces Pistachio Baklava", "Pistachio Powder Dusting"],
-      ru: ["4 штуки фисташковой баклавы", "Украшение фисташковой крошкой"],
-      de: ["4 Stück Pistazien-Baklava", "Garniert mit Pistazienstaub"]
-    }
-  },
-  {
-    id: "fd-2",
-    mainCategory: "food",
-    subCategory: "snacks",
-    badge: "Lüks Çerez",
-    priceTRY: 240,
-    icon: "cookie",
-    image: "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Lüks Karışık Kuruyemiş Tabağı (200g)",
-      en: "Premium Mixed Roasted Nuts Plate (200g)",
-      ru: "Премиум Ассорти Орехов (200г)",
-      de: "Luxus Gemischte Nüsse Teller (200g)"
-    },
-    shortDesc: {
-      tr: "Çifte kavrulmuş Antep fıstığı, kaju, fındık, badem ve soyulmuş kavrulmuş fıstık.",
-      en: "Freshly double-roasted Gaziantep pistachios, cashews, hazelnuts, and almonds.",
-      ru: "Свежеобжаренные фисташки, кешью, фундук и миндаль.",
-      de: "Frisch geröstete Pistazien, Cashews, Haselnüsse und Mandeln."
-    },
-    longDesc: {
-      tr: "İçeceklerinizin yanında mükemmel bir enerji kaynağı ve lezzetli bir atıştırmalık.",
-      en: "A delicious nutrient-dense energy snack alongside cold or hot drinks.",
-      ru: "Отличная питательная закуска к напиткам.",
-      de: "Der perfekte Knabberspaß zu Ihren Getränken."
-    },
-    included: {
-      tr: ["Antep Fıstığı", "Kaju", "Giresun Fındığı", "Badem"],
-      en: ["Pistachios", "Cashews", "Hazelnuts", "Almonds"],
-      ru: ["Фисташки", "Кешью", "Фундук", "Миндаль"],
-      de: ["Pistazien", "Cashewnüsse", "Haselnüsse", "Mandeln"]
-    }
-  },
-  {
-    id: "fd-3",
-    mainCategory: "food",
-    subCategory: "fruits",
-    badge: "Taze Meyve",
-    priceTRY: 220,
-    icon: "apple",
-    image: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Mevsim Meyveleri Tabağı",
-      en: "Seasonal Fresh Fruit Platter",
-      ru: "Тарелка Свежих Сезонных Фруктов",
-      de: "Frischer Saisonfrüchte-Teller"
-    },
-    shortDesc: {
-      tr: "Buz üzerinde dilimlenmiş karpuz, kavun, çilek, muz, üzüm ve kivi ikramı.",
-      en: "Artfully sliced fresh watermelon, melon, strawberries, bananas, and grapes on ice.",
-      ru: "Нарезка арбуза, дыни, клубники, бананов и винограда на льду.",
-      de: "Frisch auf Eis servierte Wassermelone, Honigmelone, Erdbeeren und Trauben."
-    },
-    longDesc: {
-      tr: "Alanya'nın taze ve tatlı meyvelerinden hazırlanan serinletici şölen tabağı.",
-      en: "Refreshing and hydrating fruit selection sourced daily from local orchards.",
-      ru: "Свежайшие сочные фрукты от местных фермеров.",
-      de: "Erfrischender Obstteller aus lokalen Früchten."
-    },
-    included: {
-      tr: ["Buzlu Tepside Sunum", "Mevsim Meyveleri Karışımı"],
-      en: ["Served on Ice Tray", "Mixed Seasonal Fruits"],
-      ru: ["Подача на льду", "Микс фруктов"],
-      de: ["Auf Eis serviert", "Gemischte Früchte"]
-    }
-  },
-  {
-    id: "fd-4",
-    mainCategory: "food",
-    subCategory: "hot_food",
-    badge: "Sıcak Tost",
-    priceTRY: 190,
-    icon: "sandwich",
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Gurme Kaşarlı Sucuklu Ayvalık Tostu",
-      en: "Gourmet Cheese & Sausage Toast",
-      ru: "Горячий Тост с Сыром и Колбасой",
-      de: "Gourmet-Toast mit Käse & Türkischer Wurst"
-    },
-    shortDesc: {
-      tr: "Özel Ayvalık ekmeğinde bol taze kaşar peyniri, dana sucuk, domates ve turşu.",
-      en: "Crispy Ayvalik toast filled with melted kashar cheese, beef sausage, and pickles.",
-      ru: "Хрустящий тост с расплавленным сыром, турецкой колбасой и огурчиками.",
-      de: "Knuspriger Toast mit geschmolzenem Käse, Rinderwurst und Gurken."
-    },
-    longDesc: {
-      tr: "Açlığınızı yatıştıracak sıcak, lezzetli ve doyurucu tostumuz patates cipsi ile servis edilir.",
-      en: "Warm and satisfying crispy toast served with crispy potato chips.",
-      ru: "Сытный горячий тост, подается с картофельными чипсами.",
-      de: "Warmes, herzhaftes Sandwich serviert mit Kartoffelchips."
-    },
-    included: {
-      tr: ["Ayvalık Tost Ekmeği", "Ermenek Dana Sucuk & Kaşar", "Patates Cipsi İkramı"],
-      en: ["Ayvalik Toast Bread", "Beef Sausage & Kashar Cheese", "Side Potato Chips"],
-      ru: ["Специальный хлеб", "Говяжья колбаса и сыр", "Чипсы"],
-      de: ["Special Toastbrot", "Rinderwurst & Käse", "Beilagen-Chips"]
-    }
-  },
-  {
-    id: "fd-5",
-    mainCategory: "food",
-    subCategory: "snacks",
-    badge: "Abur Cubur",
-    priceTRY: 90,
-    icon: "cookie",
-    image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=800&q=80",
-    title: {
-      tr: "Çikolata & Cips Grubu (Snickers, Toblerone, Doritos, Lay's)",
-      en: "Chocolates & Chips Selection (Toblerone, Snickers, Lays)",
-      ru: "Шоколад и Чипсы (Toblerone, Snickers, Lay's)",
-      de: "Schokolade & Chips Auswahl (Toblerone, Lays, Snickers)"
-    },
-    shortDesc: {
-      tr: "Lüks ithal ve yerli çikolatalar, aromalı patates cipsleri.",
-      en: "Assorted imported chocolates, candy bars, and savory potato crisps.",
-      ru: "Шоколадные батончики и картофельные чипсы.",
-      de: "Auswahl an Schokoladen und knusprigen Chips."
-    },
-    longDesc: {
-      tr: "Hızlı atıştırmalık ihtiyacınız için ürün seçeneklerimizi garsonumuzdan talep edebilirsiniz.",
-      en: "Quick sweet or savory snacks available upon request.",
-      ru: "Быстрые сладкие и соленые перекусы.",
-      de: "Schnelle süße oder herzhafte Snacks."
-    },
-    included: {
-      tr: ["Kişisel Paket Ambalaj", "Servis Tabağı ile"],
-      en: ["Individual Packaging", "Served on Plate"],
-      ru: ["Индивидуальная упаковка", "Подача на тарелке"],
-      de: ["Einzeln verpackt", "Serviert auf Teller"]
+      tr: ["Doğal Deniz Tuzu", "Aromatik Yağlar", "Cilt Yenileyici"],
+      en: ["Natural Sea Salt", "Aromatic Oils", "Skin Renewal"],
+      ru: ["Натуральная морская соль", "Ароматические масла", "Обновление кожи"],
+      de: ["Natürliches Meersalz", "Aromatische Öle", "Hauterneuerung"]
     }
   }
 ];
@@ -927,13 +852,12 @@ const CATALOG_ITEMS = [
 const SUB_CATEGORIES = {
   services: [
     { key: 'all', label: { tr: 'Tüm Paketler', en: 'All Packages', ru: 'Все пакеты', de: 'Alle Pakete' } },
-    { key: 'silver_package', label: { tr: 'Gümüş Paket (Silver)', en: 'Silver Package', ru: 'Серебряный Пакет', de: 'Silver Paket' } },
-    { key: 'gold_package', label: { tr: 'Gold Paket (Gold)', en: 'Gold Package', ru: 'Золотой Пакет', de: 'Gold Paket' } }
+    { key: 'silver_package', label: { tr: 'Silver Paket', en: 'Silver Package', ru: 'Серебряный Пакет', de: 'Silver Paket' } },
+    { key: 'gold_package', label: { tr: 'Gold Paket', en: 'Gold Package', ru: 'Золотой Пакет', de: 'Gold Paket' } },
+    { key: 'luxury_package', label: { tr: 'Luxury Paket (Diamond)', en: 'Luxury Package (Diamond)', ru: 'Люкс Пакет (Diamond)', de: 'Luxury Paket (Diamond)' } }
   ],
   products: [
     { key: 'all', label: { tr: 'Tüm Ürünler', en: 'All Products', ru: 'Все товары', de: 'Alle Produkte' } },
-    { key: 'spa_products', label: { tr: 'Spa & Bakım Ürünleri', en: 'Spa & Body Products', ru: 'СПА Продукция', de: 'Spa & Pflege' } },
-    { key: 'beverages', label: { tr: 'İçecekler & Meşrubatlar', en: 'Beverages & Drinks', ru: 'Напитки и Соки', de: 'Getränke' } },
-    { key: 'food', label: { tr: 'Gıda & Atıştırmalıklar', en: 'Food & Snacks', ru: 'Закуски и Еда', de: 'Speisen & Snacks' } }
+    { key: 'spa_products', label: { tr: 'Spa & Bakım Ürünleri', en: 'Spa & Body Products', ru: 'СПА Продукция', de: 'Spa & Pflege' } }
   ]
 };
