@@ -485,16 +485,23 @@ body {
 
 .highlight-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   font-size: 0.95rem;
   color: var(--gold-light);
 }
 
-.highlight-item i {
-  width: 18px;
-  height: 18px;
+.highlight-item i,
+.highlight-item svg {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  flex-shrink: 0 !important;
   color: var(--gold-primary);
+  margin-top: 2px;
 }
 
 .story-image img {
@@ -1535,14 +1542,22 @@ body {
   font-size: 0.88rem;
   color: var(--text-muted);
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
 }
 
-.modal-included-list li i {
+.modal-included-list li i,
+.modal-included-list li svg {
   color: var(--gold-primary);
-  width: 14px;
-  height: 14px;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px;
 }
 
 .modal-action-bar {
