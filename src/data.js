@@ -219,7 +219,7 @@ const CATALOG_ITEMS = [
     priceTRY: 580,
     duration: 60,
     icon: "sparkles",
-    image: "./src/images/vip_silver_package.jpg",
+    image: "./src/images/vip_silver_package.webp",
     title: {
       tr: "Gümüş Paket (Silver Package) - 60 DK",
       en: "Silver Package - 60 Min",
@@ -289,7 +289,7 @@ const CATALOG_ITEMS = [
     priceTRY: 1730,
     duration: 90,
     icon: "crown",
-    image: "./src/images/vip_gold_package.jpg",
+    image: "./src/images/vip_gold_package.webp",
     title: {
       tr: "Gold Paket (Gold Package) - 90 / 120 DK",
       en: "Gold Package - 90 / 120 Min",
@@ -371,7 +371,7 @@ const CATALOG_ITEMS = [
     priceTRY: 2310,
     duration: 150,
     icon: "gem",
-    image: "./src/images/vip_luxury_package.jpg",
+    image: "./src/images/vip_luxury_package.webp",
     title: {
       tr: "Luxury Paket (Diamond) - 150 DK",
       en: "Luxury Package (Diamond) - 150 Min",
@@ -466,7 +466,7 @@ const CATALOG_ITEMS = [
     badge: "Aromatherapy",
     priceTRY: 500,
     icon: "droplet",
-    image: "./src/images/vip_aromatherapy_oil.jpg",
+    image: "./src/images/vip_aromatherapy_oil.webp",
     title: {
       tr: "Aromatherapy Oil",
       en: "Aromatherapy Oil",
@@ -499,7 +499,7 @@ const CATALOG_ITEMS = [
     badge: "Cooling",
     priceTRY: 400,
     icon: "snowflake",
-    image: "./src/images/vip_crystal_menthol.jpg",
+    image: "./src/images/vip_crystal_menthol.webp",
     title: {
       tr: "Crystal Mentol",
       en: "Crystal Menthol",
@@ -532,7 +532,7 @@ const CATALOG_ITEMS = [
     badge: "Medical",
     priceTRY: 600,
     icon: "heart-pulse",
-    image: "./src/images/vip_medical_cream.jpg",
+    image: "./src/images/vip_medical_cream.webp",
     title: {
       tr: "Medical Cream",
       en: "Medical Cream",
@@ -565,7 +565,7 @@ const CATALOG_ITEMS = [
     badge: "Serum",
     priceTRY: 550,
     icon: "flask-round",
-    image: "./src/images/vip_aromatherapy_serum.jpg",
+    image: "./src/images/vip_aromatherapy_serum.webp",
     title: {
       tr: "Aromatherapy Serum",
       en: "Aromatherapy Serum",
@@ -598,7 +598,7 @@ const CATALOG_ITEMS = [
     badge: "Anti-Age",
     priceTRY: 700,
     icon: "sparkles",
-    image: "./src/images/vip_collagen_serum.jpg",
+    image: "./src/images/vip_collagen_serum.webp",
     title: {
       tr: "Kolajen Serum",
       en: "Collagen Serum",
@@ -631,7 +631,7 @@ const CATALOG_ITEMS = [
     badge: "Doğal",
     priceTRY: 650,
     icon: "bug",
-    image: "./src/images/vip_snail_serum.jpg",
+    image: "./src/images/vip_snail_serum.webp",
     title: {
       tr: "Snail Serum",
       en: "Snail Serum",
@@ -664,7 +664,7 @@ const CATALOG_ITEMS = [
     badge: "Nemlendirici",
     priceTRY: 650,
     icon: "droplets",
-    image: "./src/images/vip_hyaluronic_serum.jpg",
+    image: "./src/images/vip_hyaluronic_serum.webp",
     title: {
       tr: "Hyaluronic Serum",
       en: "Hyaluronic Serum",
@@ -697,7 +697,7 @@ const CATALOG_ITEMS = [
     badge: "Massage",
     priceTRY: 550,
     icon: "hand",
-    image: "./src/images/vip_smart_massage_cream.jpg",
+    image: "./src/images/vip_smart_massage_cream.webp",
     title: {
       tr: "Smart Massage Cream",
       en: "Smart Massage Cream",
@@ -730,7 +730,7 @@ const CATALOG_ITEMS = [
     badge: "Set",
     priceTRY: 1200,
     icon: "package",
-    image: "./src/images/vip_products_banner.jpg",
+    image: "./src/images/vip_products_banner.webp",
     title: {
       tr: "Face Routine Set",
       en: "Face Routine Set",
@@ -763,7 +763,7 @@ const CATALOG_ITEMS = [
     badge: "Vitamin C",
     priceTRY: 600,
     icon: "citrus",
-    image: "./src/images/vip_collagen_serum.jpg",
+    image: "./src/images/vip_collagen_serum.webp",
     title: {
       tr: "Pomegranate Serum",
       en: "Pomegranate Serum",
@@ -796,7 +796,7 @@ const CATALOG_ITEMS = [
     badge: "Organik",
     priceTRY: 650,
     icon: "droplet",
-    image: "./src/images/vip_aromatherapy_oil.jpg",
+    image: "./src/images/vip_aromatherapy_oil.webp",
     title: {
       tr: "Argan Serum",
       en: "Argan Serum",
@@ -829,7 +829,7 @@ const CATALOG_ITEMS = [
     badge: "Peeling",
     priceTRY: 450,
     icon: "sparkles",
-    image: "./src/images/vip_crystal_menthol.jpg",
+    image: "./src/images/vip_crystal_menthol.webp",
     title: {
       tr: "Aromatic Salt Peeling",
       en: "Aromatic Salt Peeling",
