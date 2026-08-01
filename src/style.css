@@ -749,19 +749,34 @@ body {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  border: 2px solid rgba(212, 175, 55, 0.35);
+  border: 1px solid rgba(229, 193, 88, 0.45);
   background: #14110e;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.75), 0 0 25px rgba(212, 175, 55, 0.15);
   display: flex;
   flex-direction: column;
 }
 
+.landing-category-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 21px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(247, 225, 153, 0.6), rgba(212, 175, 55, 0.2), rgba(168, 132, 39, 0.6));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 0.45s ease;
+}
+
 .landing-category-card:hover {
   border-color: var(--gold-primary);
-  box-shadow: 0 0 35px rgba(229, 193, 88, 0.45);
-  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.95), 0 0 40px rgba(229, 193, 88, 0.4);
+  transform: translateY(-5px);
 }
 
 .landing-category-card .card-media {
@@ -772,67 +787,86 @@ body {
   background: #0f0d0a;
 }
 
-
-
+.landing-category-card .card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 10, 8, 0) 40%, rgba(18, 14, 10, 0.85) 100%);
+  pointer-events: none;
+}
 
 .landing-category-card .card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .landing-category-card:hover .card-media img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .landing-category-card .card-banner {
-  background: #625322;
+  background: linear-gradient(135deg, #1f1a12 0%, #15110c 50%, #1c1710 100%);
+  border-top: 1px solid rgba(229, 193, 88, 0.4);
   padding: 22px 26px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  position: relative;
+  z-index: 2;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: background 0.4s ease;
+}
+
+.landing-category-card:hover .card-banner {
+  background: linear-gradient(135deg, #2a2217 0%, #1a140d 50%, #251d13 100%);
+  border-top-color: var(--gold-primary);
 }
 
 .card-banner-title {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 1px;
+  font-size: 1.45rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 20%, #f7e199 70%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.5px;
   line-height: 1.25;
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .card-banner-icon {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(20, 16, 12, 0.6);
-  border: 1px solid rgba(229, 193, 88, 0.6);
-  color: #e5c158;
+  background: var(--gold-gradient);
+  border: 1px solid #fff3b3;
+  color: #0c0a08;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 0 15px rgba(229, 193, 88, 0.25);
-  transition: all 0.35s ease;
+  box-shadow: 0 0 20px rgba(229, 193, 88, 0.5), inset 0 1px 3px rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .landing-category-card:hover .card-banner-icon {
-  background: var(--gold-gradient);
+  background: linear-gradient(135deg, #ffffff 0%, #e5c158 60%, #d4af37 100%);
   color: #0c0a08;
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 20px rgba(229, 193, 88, 0.55);
+  border-color: #ffffff;
+  box-shadow: 0 0 30px rgba(229, 193, 88, 0.85), inset 0 1px 4px #ffffff;
+  transform: scale(1.1) rotate(5deg);
 }
 
 .banner-icon-svg {
-  width: 30px;
-  height: 30px;
-  stroke-width: 1.8;
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.2;
 }
 
 /* Catalog Top Nav with Back Button */
